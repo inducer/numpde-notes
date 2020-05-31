@@ -50,7 +50,7 @@
 #+BEAMER_HEADER: \def\demonote#1{\ifshowhidden\medskip\par Demo Instructions: {\color{blue} #1}\fi}
 #+BEAMER_HEADER: \newcommand{\inclass}[1]{\textcolor{purple}{\textbf{In-class activity: }#1}}
 #+BEAMER_HEADER: \newcommand{\demo}[1]{\textcolor{purple}{\textbf{Demo: }#1}}
-#+BEAMER_HEADER: \newcommand{\demolink}[2]{\plainhref{https://mybinder.org/v2/gh/illinois-scicomp/cs555-s20-binder/master?filepath=#1/#2.ipynb}{\color{purple}\uline{\textbf{Demo: }#2}}}
+#+BEAMER_HEADER: \newcommand{\demolink}[2]{\plainhref{https://mybinder.org/v2/gh/inducer/numpde-notes/master?filepath=demos/#1/#2.ipynb}{\color{purple}\uline{\textbf{Demo: }#2}}}
 #+BEAMER_HEADER: \newcommand{\inclasslink}[2]{\plainhref{\classurl/flow/inclass-#1/start}{\color{purple}\uline{\textbf{In-class activity: }#2}}}
 #+BEAMER_HEADER: \newcommand{\sourceref}[1]{{\footnotesize[#1]}}
 
@@ -190,6 +190,38 @@ Idea: Use them to
 - Shu, Chi-Wang. /Lecture Notes for AM257/, Brown University, Fall 2006.
 - Heuveline, Vincent. /Lecture Notes for ``Numerik für PDEs''/. Universität Karlsruhe, Summer 2005.
 - Various prior bits of material by Luke Olson and Stephen Bond.
+
+*** Open Source <3
+    
+These notes (and the accompanying demos) are open-source!
+
+\bigskip
+Bug reports and pull requests welcome: [[https://github.com/inducer/numpde-notes]]
+
+\bigskip
+Copyright (C) 2020 Andreas Kloeckner
+
+\bigskip
+\scriptsize
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+\medskip
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+\medskip
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
 
 ** Classifcation of PDEs
 *** PDEs: Example I
