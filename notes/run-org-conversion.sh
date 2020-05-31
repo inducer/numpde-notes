@@ -16,6 +16,9 @@ fi
 
 set -- ${BASENAME}.org
 
+export PATH="$(pwd)/orgmk/bin:$PATH"
+echo "ORGMK_EL=$(pwd)/orgmk/site-lisp/orgmk.el" > orgmk.conf
+
 . orgmk-init
 
 eval $ORGMK -l $(pwd)/orgmk-extra-conf.el \
