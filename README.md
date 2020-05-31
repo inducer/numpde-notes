@@ -3,7 +3,8 @@
 Slides/notes and Jupyter notebook demos for an introductory course of numerical
 methods for PDEs.
 
--   [Rendered PDF](https://andreask.cs.illinois.edu/cs555-s20/notes.pdf) of the notes.
+-   [PDF](https://andreask.cs.illinois.edu/cs555-s20/notes.pdf) of these slides/notes (see `notes`
+    for source)
 
 -   [Explore demos in Binder](https://mybinder.org/v2/gh/inducer/numpde-notes/master?filepath=demos)
 
@@ -35,7 +36,7 @@ methods for PDEs.
     during class using [Xournal++](https://github.com/xournalpp/xournalpp/)
     (but equivalent notetaking applications should work just as well).
 
-## License
+## MIT License
 
 Copyright (C) 2020 Andreas Kloeckner
 
