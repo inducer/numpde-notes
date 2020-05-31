@@ -14,8 +14,10 @@ class taught by Luke Olson.
 -   [Explore demos in Binder](https://mybinder.org/v2/gh/inducer/numpde-notes/master?filepath=demos)
 
 -   The demos use annotations for [`ipython-demo-tools`](https://github.com/inducer/ipython-demo-tools).
-    A `#clear` annotation allows the `clear-marked-inputs` subcommand of `prepare-ipynb` to remove
-    the content of those input cells, maybe to use them for live coding in class.
+    A `#clear` annotation at the beginning of a code cell allows the
+    `clear-marked-inputs` subcommand of
+    [`prepare-ipynb`](https://github.com/inducer/ipython-demo-tools/blob/master/prepare-ipynb) 
+    to remove the content of those input cells, maybe to use them for live coding in class.
     The `#clear` marks themselves can be removed by that `remove-marks` subcommand.
 
 -   The notes are written in [Org mode](https://orgmode.org/), which serves as a lightweight
