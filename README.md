@@ -3,6 +3,11 @@
 Slides/notes and Jupyter notebook demos for an introductory course of numerical
 methods for PDEs.
 
+Originally developed for [CS555 in the spring of 2020](https://relate.cs.illinois.edu/course/cs555-s20/)
+in the [Department of Computer Science](https://cs.illinois.edu/)
+at the [University of Illinois](https://illinois.edu/), based on prior versions of the
+class taught by Luke Olson.
+
 -   [PDF](https://andreask.cs.illinois.edu/cs555-s20/notes.pdf) of these slides/notes (see `notes`
     for source)
 
