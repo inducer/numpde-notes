@@ -11,7 +11,8 @@ class taught by Luke Olson.
 -   [PDF](https://andreask.cs.illinois.edu/cs555-s20/notes.pdf) of these slides/notes (see `notes`
     for source)
 
--   [Explore demos in Binder](https://mybinder.org/v2/gh/inducer/numpde-notes/master?filepath=demos)
+-   [Demos](https://mybinder.org/v2/gh/inducer/numpde-notes/master?filepath=demos)
+    in [Binder](https://mybinder.org/)
 
 -   The demos use annotations for [`ipython-demo-tools`](https://github.com/inducer/ipython-demo-tools).
     A `#clear` annotation at the beginning of a code cell allows the
