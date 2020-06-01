@@ -1,8 +1,0 @@
-#!/bin/bash
-
-# https://github.com/ludios/org-to-json
-
-set -eu
-
-SELF=$(dirname -- "$(realpath -- "$0")")
-emacs --no-site-file --no-init-file -batch -l "$SELF"/org-export-json.el -f cli-org-export-json "$@"
