@@ -35,6 +35,12 @@ class taught by Luke Olson.
     ```
     ./make.sh
     ```
+    The script will optionally make use of [`latexrun`](https://github.com/cjoach/latexrun).
+    If you get
+    ```
+    There were errors; output not updated
+    ```
+    on the first go, simply rerun `make.sh`.
 
 -   `make.sh` will generate two PDFs: `notes.pdf` and `notes-folded.pdf`.
     They differ in whether the boxes present in the notes (containing many
