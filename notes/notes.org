@@ -2648,12 +2648,10 @@ Consider only $f(u)=au$ for now. Riemann solver inspiration from FD?
 #+LATEX: \begin{hidden}
 For $a \ge 0$, want ETBS:
 \begin{eqnarray*}
-  0 & = & \frac{u_{j, \ell + 1} - u_{j, \ell}}{h_t} + a \frac{u_{j, \ell} -
-  u_{j, \ell - 1}}{h_x}\\
-  & = & \frac{u_{j, \ell + 1} - u_{j, \ell}}{h_t} + \frac{f (u_{j, \ell}) - f
-  (u_{j, \ell - 1})}{h_x}\\
+  0 & = & \frac{u_{j, \ell + 1} - u_{j, \ell}}{h_t} + a \frac{u_{j, \ell} - u_{j - 1, \ell}}{h_x}\\
+  & = & \frac{u_{j, \ell + 1} - u_{j, \ell}}{h_t} + \frac{f (u_{j, \ell}) - f (u_{j - 1, \ell})}{h_x}\\
   & = & \frac{u_{j, \ell + 1} - u_{j, \ell}}{h_t} + \frac{f^{\ast} (u_{j,
-  \ell}, u_{j + 1, \ell}) - f^{\ast} (u_{j, \ell - 1,} u_{j, \ell})}{h_x} .
+  \ell}, u_{j + 1, \ell}) - f^{\ast} (u_{j - 1, \ell}, u_{j, \ell})}{h_x} .
 \end{eqnarray*}
 Clearly equivalent to a finite volume scheme! Upwind numerical flux?
 \[ f^{\ast} (u^{_-}, u^+) = \begin{cases}
@@ -2664,7 +2662,7 @@ Clearly equivalent to a finite volume scheme! Upwind numerical flux?
 #+LATEX: \end{hidden}
 *** Side Note: First Order Upwind, Rewritten
 \[ \frac{u_{j, \ell + 1} - u_{j, \ell}}{h_t} + \frac{f^{\ast} (u_{j, \ell},
-   u_{j + 1, \ell}) - f^{\ast} (u_{j, \ell - 1,} u_{j, \ell})}{h_x} \]
+   u_{j + 1, \ell}) - f^{\ast} (u_{j - 1, \ell}, u_{j, \ell})}{h_x} \]
 with
 \[ f^{\ast} (u^{_-}, u^+) = \frac{au^- + au^+}{2} - \frac{\abs{a}}{2} (u^+ -
    u^-) . \]
