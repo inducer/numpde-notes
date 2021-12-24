@@ -1,7 +1,7 @@
 #+TITLE: Numerical Methods for Partial Differential Equations
 #+SUBTITLE: CS555 / MATH552 / CSE510
 #+AUTHOR: Andreas Kloeckner
-# #+DATE: Spring 2020
+# #+DATE: Spring 2022
 
 * LaTeX header setup stuff                                         :noexport:
 
