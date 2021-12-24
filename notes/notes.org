@@ -135,13 +135,13 @@
 ** Notes
   :PROPERTIES:
   :RELATE_TREE_ICON: fa fa-book
-  :RELATE_TREE_LINK: https://andreask.cs.illinois.edu/cs555-s20/notes.pdf
+  :RELATE_TREE_LINK: https://andreask.cs.illinois.edu/cs555-s22/notes.pdf
   :END:
 
 ** Notes (unfilled, with empty boxes)
   :PROPERTIES:
   :RELATE_TREE_ICON: fa fa-book
-  :RELATE_TREE_LINK: https://andreask.cs.illinois.edu/cs555-s20/notes-folded.pdf
+  :RELATE_TREE_LINK: https://andreask.cs.illinois.edu/cs555-s22/notes-folded.pdf
   :END:
 ** About the Class
 *** What's the point of this class?
