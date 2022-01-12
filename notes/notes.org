@@ -172,7 +172,7 @@ Idea: Use them to
 *** Class web page
 
 #+BEGIN_CENTER
-[[https://bit.ly/numpde-s20]]
+[[https://bit.ly/numpde-s22]]
 #+END_CENTER
 
 - Book Draft
