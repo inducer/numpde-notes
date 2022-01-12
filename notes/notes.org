@@ -1,7 +1,7 @@
 #+TITLE: Numerical Methods for Partial Differential Equations
 #+SUBTITLE: CS555 / MATH552 / CSE510
 #+AUTHOR: Andreas Kloeckner
-# #+DATE: Spring 2022
+#+DATE: Spring 2022
 
 * LaTeX header setup stuff                                         :noexport:
 
@@ -186,7 +186,8 @@ Idea: Use them to
 
 *** Sources for these Notes
 
-- Adler, James, Hans De Sterck, Scott MacLachlan, and Luke N. Olson. /Numerical Partial Differential Equations/, 2020. (draft)
+- Adler, James, Hans De Sterck, Scott MacLachlan, and Luke N. Olson.
+  /Numerical Partial Differential Equations/, 2022. (draft)
 - Strikwerda, John C. /Finite Difference Schemes and Partial Differential Equations/, Second Edition. Other Titles in Applied Mathematics. Society for Industrial and Applied Mathematics, 2004.
 - LeVeque, Randall J. /Numerical Methods for Conservation Laws/. 2nd ed. Birkhäuser Basel, 1992.
 - Braess, Dietrich. /Finite Elements: Theory, Fast Solvers, and Applications in Solid Mechanics/. Cambridge University Press, 2007.
@@ -202,7 +203,7 @@ These notes (and the accompanying demos) are open-source!
 Bug reports and pull requests welcome: [[https://github.com/inducer/numpde-notes]]
 
 \bigskip
-Copyright (C) 2020 Andreas Kloeckner
+Copyright (C) 2020-22 Andreas Kloeckner
 
 \bigskip
 \scriptsize
