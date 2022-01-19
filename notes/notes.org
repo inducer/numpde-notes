@@ -5,8 +5,7 @@
 
 * LaTeX header setup stuff                                         :noexport:
 
-#+STARTUP: noindent
-#+STARTUP: beamer
+#+startup: beamer content indent
 
 #+LATEX_CLASS: beamer
 #+LaTeX_CLASS_OPTIONS: [aspectratio=149]
