@@ -251,18 +251,18 @@ What does this do? \(\partial_x^2 u +\partial_y^2 u=0\)
 *** Some good questions
 
 - What is a time-like variable? (Variables labeled $t$?)
-- What if there are boundaries?
-  - In space?
-  - In time?
+#+LATEX: \begin{hidden}
+A variable across which information does not flow `backward'.
+#+LATEX: \end{hidden}
+- What if there are boundaries? (space/time)
 - Existence and Uniqueness of Solutions?
   - Depends on where we look (the /function space/)
   - In the case of the two examples? (if there are no boundaries?)
 
 Some general takeaways:
 #+LATEX: \begin{hidden}
-- Don't check common sense at the door.
-- Think about what the PDE is "trying" to say.
-- Develop physical intuition.
+- Simple techniques can go a long way.
+- Develop/make use of physical intuition.
 #+LATEX: \end{hidden}
 
 *** PDEs: An Unhelpfully Broad Problem Statement
@@ -510,6 +510,7 @@ Can be rewritten in *conservation law* form:
 Why is this called a conservation law?
 #+LATEX: \begin{hidden}
 - Balance between a conserved quantity $q$ and a flux $f$.
+  - Integrate, consider divergence theorem
 - Flux prescribes the `flow direction'. When is flux divergence $<0$?
 - $s$ is a source term.
 #+LATEX: \end{hidden}
