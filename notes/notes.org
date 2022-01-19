@@ -280,7 +280,7 @@ Used as convenient:
 
 What is the *order* of the PDE?
 #+LATEX: \begin{hidden}
-The highest (total, i.e. summing over axes) order of derivative occuring in $F$.
+The highest (total, i.e. summing over axes) order of derivative occurring in $F$.
 #+LATEX: \end{hidden}
 
 When is the PDE *linear*?
@@ -295,7 +295,7 @@ The dependency in $F$ on the highest-order partial derivatives is linear in $u$.
 
 When is the PDE *semilinear*?
 #+LATEX: \begin{hidden}
-If it is quasi-linear and if the high-order terms have coefficients that depend only on $x$.
+If it is quasi-linear and if the high-order terms have coefficients that depend only on space.
 #+LATEX: \end{hidden}
 
 *** Examples: Order, Linearity?
@@ -315,9 +315,9 @@ First-order semilinear
 - with corners
 - with /reentrant/  corners
 - with cusps
-#+LATEX: \end{hidden}
 
 May influence existence/uniqueness of solutions!
+#+LATEX: \end{hidden}
 
 *** Function Spaces: Examples
 
@@ -381,6 +381,9 @@ that behave mostly alike.
 Where do these names come from?
 #+LATEX: \begin{hidden}
 Quadratic forms: $a x^2 +2b xy +c y^2 + \text{lower order terms}$
+
+Where does this come from? The search for /characteristic curves/.
+Will see these again later. See [[https://people.maths.bris.ac.uk/~maajh/methods/chap1.pdf][Hogg `17]] for a good description.
 #+LATEX: \end{hidden}
 
 *** PDE Classification in Other Cases
@@ -392,7 +395,7 @@ First order systems of PDEs?
 #+LATEX: \begin{hidden}
 Can be classified into hyperbolic/elliptic/parabolic as well, using
 slightly more complicated method, depending on the direction of
-the characteristics. See for example [[http://people.3sr-grenoble.fr/users/bloret/enseee/maths/loret_maths-EEE.html][Loret `08]].
+the characteristics. See [[https://people.maths.bris.ac.uk/~maajh/methods/chap1.pdf][Hogg `17]] or [[http://people.3sr-grenoble.fr/users/bloret/enseee/maths/loret_maths-EEE.html][Loret `08]].
 #+LATEX: \end{hidden}
 *** Classification in higher dimensions
 
