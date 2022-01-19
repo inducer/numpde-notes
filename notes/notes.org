@@ -386,7 +386,7 @@ Quadratic forms: $a x^2 +2b xy +c y^2 + \text{lower order terms}$
 *** PDE Classification in Other Cases
 Scalar first order PDEs?
 #+LATEX: \begin{hidden}
-Have characteristics, therefore classified as hyperbolic. (See later.)
+Classified as hyperbolic. (See later.)
 #+LATEX: \end{hidden}
 First order systems of PDEs?
 #+LATEX: \begin{hidden}
