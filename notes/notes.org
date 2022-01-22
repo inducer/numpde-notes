@@ -581,6 +581,26 @@ square.
 \[V \left ( \text{coefficients} \right ) = \left ( \text{values at nodes}
    \right ) . \]
 #+LATEX: \end{hidden}
+*** Numerical Differentiation: How?
+
+How can we take derivatives numerically?
+
+#+LATEX: \begin{hidden}
+Let $\b x = (x_i)_{i = 1}^n$ be nodes and $(\varphi_i)_{i = 1}^n$ an interpolation basis.
+
+Find interpolation coefficients $\b{\alpha}= (\alpha_i)_{i = 1}^n = V^{- 1} f (\b{x})$. Then
+\[
+  f (\xi) \approx p_{n - 1} (\xi) = \sum_{i = 1}^n \alpha_i \varphi_i (\xi).
+\]
+Then, simply take a derivative:
+\[
+  f' (\xi) \approx p_{n - 1}' (\xi) = \sum_{i = 1}^n \alpha_i \varphi_i' (\xi) .
+\]
+$\varphi_i'$ are known because the interpolation basis $\varphi_i$ is known!
+#+LATEX: \end{hidden}
+
+\demolink{intro}{Taking Derivatives with Vandermonde Matrices}
+
 *** Finite Differences Numerically
 \demolink{intro}{Finite Differences}
 
@@ -612,8 +632,6 @@ Why /shouldn't/ you take derivatives numerically?
 
     (where \(n\) is the number of points)
 #+LATEX: \end{hidden}
-
-\demolink{intro}{Taking Derivatives with Vandermonde Matrices}
 
 *** Differencing Order of Accuracy Using Taylor
 
