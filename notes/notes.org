@@ -531,7 +531,7 @@ Introduce a new variable $v$ and let
   u_t &= c v_x\\
   v_t &= c u_x.
 \end{align*}
-Observe $u_{tt}=c v_{xt}=c^2 u_{uxx}$. Define $q:=\begin{bmatrix}u & v\end{bmatrix}^T$.
+Observe $u_{tt}=c v_{xt}=c^2 u_{xx}$. Define $q:=\begin{bmatrix}u & v\end{bmatrix}^T$.
 #+LATEX: \end{hidden}
 
 *** Solving Conservation Laws
@@ -542,7 +542,7 @@ Solve
 \end{align*}
 
 #+LATEX: \begin{hidden}
-\[q_t +\begin{bmatrix} 0&-c \\ -c & 0\end{bmatrix} q_x = Aq_x =0\]
+\[q_t +\begin{bmatrix} 0&-c \\ -c & 0\end{bmatrix} q_x = q_t + Aq_x =0\]
 Diagonalize: Define \(\tilde q:= V^{-1} q\),
 \[\tilde q_t + V^{-1}A V\tilde q_x =\begin{bmatrix} c&0 \\ 0 & -c\end{bmatrix} \tilde q_x = 0\]
 $\rightarrow$ two advection equations
