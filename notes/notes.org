@@ -875,7 +875,7 @@ Terminology?
 - **T** Time / **S** Space
 - **F** Forward: *right*
 - **B** Backward: *left*
-- **Upwind**: *left* if $a<0$
+- **Upwind**: *left* if $a>0$
 - **Downwind**: *right* if $a>0$
 #+LATEX: \end{hidden}
 
