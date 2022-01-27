@@ -731,10 +731,12 @@ Solution?
 Generalize to 1D conservation law: \(u_t+f(u)_x=0\). Find solution.
 
 *Characteristic Curve:* Define a function $x (t)$ so that $u(x(t),t)=u(x_0,0)$.
+Suppose we consider $x$ defined by the IVP
 \[ \left\{\begin{array}{l}
      \frac{\mathd x (t)}{\mathd t} = f' (u (x (t),t)),\\
      x (0) = x_0 .
-   \end{array}\right. \]
+   \end{array}\right.\]
+Then
 \begin{equation*} \frac{\mathd u (x (t), t)}{\mathd t} = u_x x' (t) + u_t = u_x f' (u (x (t),t)
    + u_t = f (u)_x + u_t = 0. \end{equation*}
 So $u (x (t), t) = u (x (0), 0) = g(x_0)$.
@@ -1095,10 +1097,10 @@ is applied to a smooth exact solution $u$ at $(x_k,t_\ell)$.
 \demolink{fd-tdep}{Truncation Error Analysis via sympy}
 
 *** Error and Error Propagation
-Express truncation error in our two-level framework:
+Express definition of truncation error in our two-level framework:
 #+LATEX: \begin{hidden}
 \[ P_h \b{u}_{\ell + 1} = Q_h \b{u}_{\ell} +
-   \b{\tau}_{\ell} h_t . \]
+\underbrace{\b{\tau}_{\ell}}_{\text{Trunc.Err.}} h_t . \]
 #+LATEX: \end{hidden}
 
 Define $\b{e}_{\ell} =\b{u}_{\ell} -\b{v}_\ell$. Understand
@@ -1119,12 +1121,15 @@ Subtract from the truncation error definition to find:
 
 To measure properties of numerical solutions we need *norms*. Define a discrete $L^\infty$ norm.
 #+LATEX: \begin{hidden}
-\[ \norm{\b{e}}_{\infty} = \max_{k, \ell} | e_{k, \ell} | .\]
+\[ \norm{\b{e}}_{\infty} = \max_{k, \ell} | e_{k, \ell} | .
+\]
 #+LATEX: \end{hidden}
 
 Define a discrete $L^2$ norm.
 #+LATEX: \begin{hidden}
-\[ \norm{\b{e}}_2 = \sqrt{\sum_{k, \ell} e_{k, \ell}^2 h_x h_t} .\]
+\vspace*{-2ex}
+\[ \norm{\b{e}}_2 = \sqrt{\sum_{k, \ell} e_{k, \ell}^2 h_x h_t} .
+\qquad\text{Unless otherwise given: } \norm{\cdot} =\norm{\cdot}_2. \]
 #+LATEX: \end{hidden}
 
 Important features:
@@ -1289,7 +1294,7 @@ Let $\ell h_t \le t^{\ast}$. Taking the norm of both sides,
 
 Give a simpler, sufficient condition:
 #+LATEX: \begin{hidden}
-\[ \norm{(P^{- 1}_h Q_h)^{\ell}\|\leq 1,\qquad  P_h^{- 1}} \le c. \]
+\[ \norm{P^{- 1}_h Q_h}\leq 1,\qquad  \norm{P_h^{- 1}} \le c. \]
 Also called *Lax-Richtmyer stability*.
 #+LATEX: \end{hidden}
 
