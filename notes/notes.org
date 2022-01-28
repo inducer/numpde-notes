@@ -1172,7 +1172,7 @@ A two-level scheme is *convergent* in the \(L^2\)-norm with order $q_t$ in time 
 
 Is consistency sufficient for convergence?
 
-*** Analyzing ETFS
+*** Analyzing ETFS (1/2)
 
 
 \[ \frac{u_{k, \ell + 1} - u_{k, \ell}}{h_t} + a \frac{u_{k + 1, \ell} - u_{k,
@@ -1186,7 +1186,7 @@ Rewrite as
 for $\lambda = ah_t / h_x$.
 #+LATEX: \end{hidden}
 
-*** ETFS Part 2
+*** Analyzing ETFS (2/2)
 
 \[ u_{k, \ell + 1} = (1 + \lambda) u_{k, \ell} - \lambda u_{k + 1, \ell} \]
 
