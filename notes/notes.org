@@ -537,8 +537,8 @@ Observe $u_{tt}=c v_{xt}=c^2 u_{xx}$. Define $q:=\begin{bmatrix}u & v\end{bmatri
 *** Solving Conservation Laws
 Solve
 \begin{align*}
-  u_t &= v_x\\
-  v_t &= u_x.
+  u_t &= c v_x\\
+  v_t &= c u_x.
 \end{align*}
 
 #+LATEX: \begin{hidden}
