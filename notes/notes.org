@@ -1202,7 +1202,7 @@ Consider $u (x, 0) = \b{1}_{[- 1, 0]} (x)$. Predict solution behavior.
 So the right half never ``sees'' the traveling bump; this can't be convergent.
 Meanwhile,
 \[ u (0, t) \approx u_{0, t / h_t} = \left( 1 + \frac{ah_t}{h_x} \right)^{t /
-   h_t} = \left( 1 + \frac{a / h_x}{1 / h_t} \right)^{t / h_t} = \exp \left(
+   h_t} = \left( 1 + \frac{a / h_x}{1 / h_t} \right)^{t / h_t} \stackrel{h_t\to0}\to \exp \left(
    \frac{at}{h_x} \right) \]
 #+LATEX: \end{hidden}
 \demolink{fd-tdep}{Methods for 1D Advection} (Revisit ETFS)
