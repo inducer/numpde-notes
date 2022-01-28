@@ -1178,7 +1178,7 @@ Is consistency sufficient for convergence?
 \[ \frac{u_{k, \ell + 1} - u_{k, \ell}}{h_t} + a \frac{u_{k + 1, \ell} - u_{k,
    \ell}}{h_x} = 0 \]
 
-Let's understand more precisely what happens for this scheme.
+Let's understand more precisely what happens for this scheme. Assume $a>0$.
 #+LATEX: \begin{hidden}
 Rewrite as
 \[ u_{k, \ell + 1} = u_{k, \ell} - \frac{ah_t}{h_x} (u_{k + 1, \ell} - u_{k,
