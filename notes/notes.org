@@ -642,7 +642,7 @@ Find the order of accuracy of the finite difference formula $f' (x) \approx [f (
    = & f' (x) - \frac{1}{2 h} \left[ f (x) + hf' (x) + \frac{h^2}{2} f'' (x)
   + \frac{h^3}{6} f''' (x) + O (h^4) \right]\\
     & + \frac{1}{2 h} \left[ f (x) - hf' (x) + \frac{h^2}{2} f'' (x) -
-  \frac{h^3}{6} f''' (x) \right]\\
+  \frac{h^3}{6} f''' (x) + O (h^4) \right]\\
    = & \frac{1}{2 h} \cdot \frac{h^3}{6} f''' (x) \quad \text{as $h
   \rightarrow 0$} .
 \end{align*}
@@ -1201,9 +1201,10 @@ Consider $u (x, 0) = \b{1}_{[- 1, 0]} (x)$. Predict solution behavior.
 \end{eqnarray*}
 So the right half never ``sees'' the traveling bump; this can't be convergent.
 Meanwhile,
-\[ u (0, t) \approx u_{0, t / h_t} = \left( 1 + \frac{ah_t}{h_x} \right)^{t /
-   h_t} = \left( 1 + \frac{a / h_x}{1 / h_t} \right)^{t / h_t} \stackrel{h_t\to0}\to \exp \left(
-   \frac{at}{h_x} \right) \]
+\[ u (0, t) \approx u_{0, t / h_t}
+  = \left( 1 + \frac{ah_t}{h_x} \right)^{t / h_t}
+  = \left( 1 + \frac{a t / h_x}{t / h_t} \right)^{t / h_t}
+  \stackrel{h_t\to0}\to \exp \left(\frac{at}{h_x} \right) \]
 #+LATEX: \end{hidden}
 \demolink{fd-tdep}{Methods for 1D Advection} (Revisit ETFS)
 *** Stability
