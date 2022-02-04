@@ -1003,7 +1003,7 @@ Write out Lax-Wendroff.
      :PROPERTIES:
      :BEAMER_col: 0.5
      :END:
-Define
+Numerical solution vectors:
 \[\b v_\ell=\begin{bmatrix} u_{1,\ell}\\ \vdots\\ u_{N_x,\ell}\end{bmatrix},
 \quad
 \b v=\begin{bmatrix} \b v_1\\ \vdots\\ \b v_{N_t}\end{bmatrix}.\]
@@ -1013,7 +1013,7 @@ Define
      :BEAMER_col: 0.5
      :END:
 
-Define
+True solution vectors:
 \[\b u_\ell=\begin{bmatrix} u(x_1,t_\ell)\\ \vdots \\ u(x_{N_x},t_\ell)\end{bmatrix}\,
 \quad
 \b u=\begin{bmatrix} \b u_1\\ \vdots \\ \b u_{N_t}\end{bmatrix}.\]
@@ -1243,15 +1243,15 @@ it is
      :END:
 
 #+LATEX: \begin{hidden}
-A stronger result holds: The above is actually ``if and only if''.
+- A stronger result holds: The above is actually ``if and only if''.
 
-(called the *Lax Equivalence Theorem* or *Lax-Richtmyer Theorem*)
+  (called the *Lax Equivalence Theorem* or *Lax-Richtmyer Theorem*)
 
-Think of this as an important `meta-theorem' of numerical analysis (or ``fundamental theorem of NA"):
-\[
-  \text{Consistent} + \text{Stable} \Rightarrow \text{Convergent}
-\]
-A related result holds for ODEs, due to Dahlquist.
+- Think of this as an important `meta-theorem' of numerical analysis (or ``fundamental theorem of NA"):
+  \[
+    \text{Consistent} + \text{Stable} \Rightarrow \text{Convergent}
+  \]
+- A related result holds for ODEs, due to Dahlquist.
 #+LATEX: \end{hidden}
 
 *** Lax Convergence: Proof (1/2)
@@ -1553,22 +1553,16 @@ Bound \(\norm{P_h^{- 1} Q_h}_2^2\) using Fourier:
 #+LATEX: \begin{hidden}
 \vspace*{-3ex}
 \begin{multline*}
-  \norm{P_h^{- 1} Q_h}_2^2 = \sup_{\b{x} \neq \b{0}}
-  \frac{\norm{P^{- 1}_h Q_h \b{x}}^2_2}{\norm{\b{x}}^2_2} =
-  \sup_{\b{x} \neq \b{0}} \frac{\frac{h_x}{2 \pi} \int_{-
-  \pi}^{\pi} \abs{\frac{\hat{\b{q}} (\theta)}{\hat{\b{p}}
-  (\theta)} \hat{\b{x}} (\theta)}^2 d \theta}{\frac{h_x}{2 \pi} \int_{-
-  \pi}^{\pi} \abs{\hat{\b{x}} (\theta)}^2 d \theta}\\
-  \le \sup_{\b{x} \neq \b{0}} \frac{\max_{\varphi \in
-  [- \pi, \pi]} \abs{\frac{\hat{\b{q}} (\varphi)}{\hat{\b{p}}
-  (\varphi)}} \int_{- \pi}^{\pi} \abs{\hat{\b{x}} (\theta)}^2 d
-  \theta}{\int_{- \pi}^{\pi} \abs{\hat{\b{x}} (\theta)}^2 d \theta} =
-  \max_{\varphi \in [- \pi, \pi]} \abs{\frac{\hat{\b{q}}
-  (\varphi)}{\hat{\b{p}} (\varphi)}} .
+  \norm{P_h^{- 1} Q_h}_2^2 
+  = \sup_{\b{x} \neq \b{0}} \frac{\norm{P^{- 1}_h Q_h \b{x}}^2_2}{\norm{\b{x}}^2_2}
+  = \sup_{\b{x} \neq \b{0}} \frac{\frac{h_x}{2 \pi} 
+    \int_{- \pi}^{\pi} \abs{\frac{\hat{\b{q}} (\theta)}{\hat{\b{p}} (\theta)} \hat{\b{x}} (\theta)}^2 d \theta}{\frac{h_x}{2 \pi} \int_{- \pi}^{\pi} \abs{\hat{\b{x}} (\theta)}^2 d \theta}\\
+  \le \sup_{\b{x} \neq \b{0}} \frac{\max_{\varphi \in [- \pi, \pi]} \abs{\frac{\hat{\b{q}} (\varphi)}{\hat{\b{p}} (\varphi)}} \int_{- \pi}^{\pi} \abs{\hat{\b{x}} (\theta)}^2 d \theta}{\int_{- \pi}^{\pi} \abs{\hat{\b{x}} (\theta)}^2 d \theta}
+  = \max_{\varphi \in [- \pi, \pi]} \abs{\frac{\hat{\b{q}} (\varphi)}{\hat{\b{p}} (\varphi)}} .
 \end{multline*}
 Similarly,
 \[ \norm{P_h^{- 1}}_2^2 \le \max_{\varphi \in [- \pi, \pi]}
-   \abs{\hat{\b{p}} (\varphi)} . \]
+   \abs{1/\hat{\b{p}} (\varphi)} . \]
 #+LATEX: \end{hidden}
 Is the upper bound attained?
 #+LATEX: \begin{hidden}
