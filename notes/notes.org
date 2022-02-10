@@ -1480,23 +1480,16 @@ Both $P_h$ and $Q_h$ are Toeplitz.
 \begin{eqnarray*}
   \hat{\b{y}} (\theta) & = & \sum_j \sum_k x_k p_{j - k} e^{- i \theta
   j}\\
-  & = & \sum_j \sum_k \left( \frac{1}{2 \pi} \int_{- \pi}^{\pi}
-  \hat{\b{x}} (\theta) e^{i \varphi k} d \varphi \right) p_{j - k} e^{-
-  i \theta j}\\
-  & = & \frac{1}{2 \pi} \int_{- \pi}^{\pi} \hat{\b{x}} (\theta) \sum_j
-  \sum_k e^{i \varphi k} p_{j - k} e^{- i \theta j} d \theta\\
-  & = & \frac{1}{2 \pi} \int_{- \pi}^{\pi} \hat{\b{x}} (\theta) \sum_j
-  \left( \sum_k e^{i \varphi (k - j)} p_{j - k} \right) e^{i (\varphi -
-  \theta) j} d \theta .
+  & = & \sum_j \sum_k \left( \frac{1}{2 \pi} \int_{- \pi}^{\pi} \hat{\b{x}} (\varphi) e^{i \varphi k} d \varphi \right) p_{j - k} e^{- i \theta j}\\
+  & = & \frac{1}{2 \pi} \int_{- \pi}^{\pi} \hat{\b{x}} (\varphi) \sum_j \sum_k e^{i \varphi k} p_{j - k} e^{- i \theta j} d \varphi\\
+  & = & \frac{1}{2 \pi} \int_{- \pi}^{\pi} \hat{\b{x}} (\varphi) \sum_j \left( \sum_k e^{i \varphi (k - j)} p_{j - k} \right) e^{i (\varphi - \theta) j} d \varphi .
 \end{eqnarray*}
 #+LATEX: \end{hidden}
 
 *** Fourier Transforms of Toeplitz Operators (2/3)
 
 \begin{equation*}
-  \hat{\b{y}} (\theta) = \frac{1}{2 \pi} \int_{- \pi}^{\pi} \hat{\b{x}} (\theta) \sum_j
-  \left( \sum_k e^{i \varphi (k - j)} p_{j - k} \right) e^{i (\varphi -
-  \theta) j} d \theta .
+  \hat{\b{y}} (\theta) = \frac{1}{2 \pi} \int_{- \pi}^{\pi} \hat{\b{x}} (\varphi) \sum_j \left( \sum_k e^{i \varphi (k - j)} p_{j - k} \right) e^{i (\varphi - \theta) j} d \varphi .
 \end{equation*}
 #+LATEX: \begin{hidden}
 
@@ -1506,18 +1499,14 @@ Consider
    p_{j - k} \overset{\ell = j - k}{=} \hat{\b{p}} (\varphi).\]
 So
 \begin{equation*}
-   \hat{\b{y}} (\theta) = \int_{- \pi}^{\pi} \hat{\b{x}}
-   (\theta) \hat{\b{p}} (\varphi) \frac{1}{2 \pi} \sum_j e^{i (\varphi
-   - \theta) j} d \theta.
+   \hat{\b{y}} (\theta) = \int_{- \pi}^{\pi} \hat{\b{x}} (\varphi) \hat{\b{p}} (\varphi) \frac{1}{2 \pi} \sum_j e^{i (\varphi - \theta) j} d \varphi.
 \end{equation*}
 #+LATEX: \end{hidden}
 
 *** Fourier Transforms of Toeplitz Operators (3/3)
 
 \begin{equation*}
-   \hat{\b{y}} (\theta) = \int_{- \pi}^{\pi} \hat{\b{x}}
-   (\theta) \hat{\b{p}} (\varphi) \frac{1}{2 \pi} \sum_j e^{i (\varphi
-   - \theta) j} d \theta.
+   \hat{\b{y}} (\theta) = \int_{- \pi}^{\pi} \hat{\b{x}} (\varphi) \hat{\b{p}} (\varphi) \frac{1}{2 \pi} \sum_j e^{i (\varphi - \theta) j} d \varphi.
 \end{equation*}
 
 #+LATEX: \begin{hidden}
@@ -1525,14 +1514,11 @@ Define $w_j = (1 / 2 \pi) e^{i \varphi j}$. Then
 \( \hat{\b{w}} (\theta) = \frac{1}{2 \pi} \sum_k e^{i (\varphi -
    \theta) k}.\)
 So
-\[ \hat{\b{y}} (\theta) = \int_{- \pi}^{\pi} \hat{\b{x}}
-   (\theta) \hat{\b{p}} (\varphi) \hat{\b{w}} (\theta) d \theta.\]
+\[ \hat{\b{y}} (\theta) = \int_{- \pi}^{\pi} \hat{\b{x}} (\varphi) \hat{\b{p}} (\varphi) \hat{\b{w}} (\theta) d \varphi.\]
 To determine $\hat{\b{w}} (\theta)$, consider
 \[ (1 / 2 \pi) e^{i \varphi j} = w_j = \frac{1}{2 \pi} \int_{- \pi}^{\pi}
    \hat{\b{w}} (\theta) e^{i \theta j} d \theta .\]
-Observe that $\hat{\b{w}} (\theta) = \delta (\varphi - \theta)$ would
-do the trick.
-
+Observe that (by uniqueness of the FT) $\hat{\b{w}} (\theta) = \delta (\varphi - \theta)$ would do the trick.
 Therefore \(\hat{\b{y}} (\theta) = \hat{\b{x}} (\theta) \hat{\b{p}} (\theta)\).
 #+LATEX: \end{hidden}
 
