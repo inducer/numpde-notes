@@ -1450,7 +1450,7 @@ Is ETCS Toeplitz?
    p_{j - k} = \begin{cases}
      1 & k = j,\\
      0 & \text{otherwise} .
-   \end{cases} \qquad p_{\ell} = \delta_{0, \ell}.
+   \end{cases} \qquad p_m = \delta_{0, m}.
 \end{equation*}
 #+LATEX: \end{hidden}
 \((Q_h \b{u}_{\ell})_j = \lambda u_{k - 1, \ell} + u_{k, l} - \lambda u_{k + 1, \ell} \overset{!}{=} \sum_k u_{k, \ell} q_{j - k}\)
@@ -1461,10 +1461,10 @@ Is ETCS Toeplitz?
      1 & k = j,\\
      - \lambda & k = j + 1,\\
      0 & \text{otherwise} .
-   \end{cases} \qquad q_{\ell} = \begin{cases}
-     \lambda & \ell = 1,\\
-     1 & \ell = 0,\\
-     - \lambda & \ell = - 1,\\
+   \end{cases} \qquad q_m = \begin{cases}
+     \lambda & m = 1,\\
+     1 & m = 0,\\
+     - \lambda & m = - 1,\\
      0 & \text{otherwise} .
    \end{cases}
 \end{equation*}
