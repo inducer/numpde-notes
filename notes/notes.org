@@ -509,18 +509,18 @@ Can be rewritten in *conservation law* form:
 
 *** Hyperbolic Conservation Laws
 
-\[q_t(x,t) + \nabla\cdot \b F(q(x,t)) = s(x)\]
-Why is this called a conservation law?
+\[\b q_t(\b x,t) + \nabla\cdot \b F(\b q(\b x,t)) = \b s(\b x)\]
+Why is this called a (system of) conservation law(s)?
 #+LATEX: \begin{hidden}
-- Balance between a conserved quantity $q$ and a flux $f$.
-  - Integrate, consider divergence theorem
+- Balance between a conserved quantity $\b q$ and a flux $\b F$.
+  - Integrate, consider divergence theorem (for $n=1$)
 - Flux prescribes the `flow direction'. When is flux divergence $<0$?
 - $s$ is a source term.
 #+LATEX: \end{hidden}
 $F: ?\to ?$
 #+LATEX: \begin{hidden}
-- $q(x,t) \in \mathbb R^n$
-- $F: \mathbb R^n \to\mathbb R^n\times \mathbb R^d$
+- $\b q(\b x,t) \in \mathbb R^n$
+- $\b F: \mathbb R^n \to\mathbb R^n\times \mathbb R^d$
 #+LATEX: \end{hidden}
 
 *** Wave Equation as a Conservation Law
@@ -531,7 +531,7 @@ Introduce a new variable $v$ and let
   u_t &= c v_x\\
   v_t &= c u_x.
 \end{align*}
-Observe $u_{tt}=c v_{xt}=c^2 u_{xx}$. Define $q:=\begin{bmatrix}u & v\end{bmatrix}^T$.
+Observe $u_{tt}=c v_{xt}=c^2 u_{xx}$. Define $\b q:=\begin{bmatrix}u & v\end{bmatrix}^T$.
 #+LATEX: \end{hidden}
 
 *** Solving Conservation Laws
@@ -542,9 +542,9 @@ Solve
 \end{align*}
 
 #+LATEX: \begin{hidden}
-\[q_t +\begin{bmatrix} 0&-c \\ -c & 0\end{bmatrix} q_x = q_t + Aq_x =0\]
-Diagonalize: Define \(\tilde q:= V^{-1} q\),
-\[\tilde q_t + V^{-1}A V\tilde q_x =\begin{bmatrix} c&0 \\ 0 & -c\end{bmatrix} \tilde q_x = 0\]
+\[\b q_t +\begin{bmatrix} 0&-c \\ -c & 0\end{bmatrix} \b q_x = \b q_t + A\b q_x =\b 0\]
+Diagonalize: Define \(\b{\tilde q}:= V^{-1} \b q\),
+\[\b{\tilde q}_t + V^{-1}A V\b{\tilde q}_x =\b{\tilde q}_t +\begin{bmatrix} c&0 \\ 0 & -c\end{bmatrix} \b{\tilde q}_x = 0\]
 $\rightarrow$ two advection equations
 
 \medskip
