@@ -1282,9 +1282,8 @@ Let $\ell h_t \le t^{\ast}$. Taking the norm of both sides,
   & \le & h_t \sum_{m = 1}^{\ell} \underbrace{\norm{(P_h^{- 1}
   Q_h)^{\ell - m} P_h^{- 1} \b{}}}_{\le c \text{ (stab.)}}
   \norm{\b{\tau}_{m - 1}}\\
-  & \le & h_t \ell c \cdot \max_{\ell : \ell h_t \le t^{\ast}}
-  \norm{\b{\tau}_{m - 1}} \le ct^{\ast} \max_{\ell : \ell h_t
-  \le t^{\ast}} \norm{\b{\tau}_{m - 1}} \\
+  & \le & h_t \ell c \cdot \max_{\ell : \ell h_t \le t^{\ast}} \norm{\b{\tau}_\ell}
+  \le ct^{\ast} \max_{\ell : \ell h_t \le t^{\ast}} \norm{\b{\tau}_\ell} \\
   &\overset{\text{cons.}}{=}& O (h_x^{q_x} + h_t^{q_t}) .
 \end{eqnarray*}
 #+LATEX: \end{hidden}
