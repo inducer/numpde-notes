@@ -1342,11 +1342,9 @@ $P_h = I$ and $Q_h = \tmop{tridiag} (\lambda, 1 - \lambda, 0)$.
 \[ \norm{Q_h} = \sqrt{\rho (Q^T_h Q_h)}, \]
 where $Q_h^T Q_h = \tmop{tridiag} (\lambda (1 - \lambda), (1 - \lambda)^2 +
 \lambda^2, \lambda (1 - \lambda))$.
-If $0 \le \lambda \le 1$, then $\lambda (1 - \lambda) \ge
-0$.
+Assume $0 \le \lambda \le 1$ for now, then $\lambda (1 - \lambda) \ge 0$. Let $\Lambda\in\sigma(Q^T_h Q_h)$.
 \begin{eqnarray*}
-  2 \lambda^2 - 2 \lambda \le & \Lambda - (1 - \lambda)^2 - \lambda^2 &
-  \le 2 \lambda - 2 \lambda^2,\\
+  2 \lambda^2 - 2 \lambda \le & \Lambda - (1 - \lambda)^2 - \lambda^2 & \le 2 \lambda - 2 \lambda^2,\\
   1 - 4 \lambda + 4 \lambda^2 \le & \Lambda & \le 1,\\
   0 \le (1 - 2 \lambda)^2 \le & \Lambda & \le 1.
 \end{eqnarray*}
@@ -1383,7 +1381,7 @@ Way cumbersome to prove. Is there something easier that gives necessary/sufficie
 #+LATEX: \end{hidden}
 
 ** Von Neumann Stability
-*** Discrete Time Fourier Transform
+*** Discrete (Space) Fourier Transform
 Assume $\b{x}$ infinitely long. Define:
 \[ \hat{\b{x}} (\theta) = \sum_k x_k e^{- i \theta k} \]
 
