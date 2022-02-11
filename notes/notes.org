@@ -1383,13 +1383,13 @@ Way cumbersome to prove. Is there something easier that gives necessary/sufficie
 ** Von Neumann Stability
 *** Discrete (Space) Fourier Transform
 Assume $\b{x}$ infinitely long. Define:
-\[ \hat{\b{x}} (\theta) = \sum_k x_k e^{- i \theta k} \]
+\[ \hat{\b{x}} (\theta) = \sum_{k\in\mathbb Z} x_k e^{- i \theta k} \]
 
 When is this well-defined?
 #+LATEX: \begin{hidden}
 \[ \abs{\hat{\b{x}} (\theta)} = \abs{\sum_k x_k e^{- i \theta k}}
    \le \sum_k \abs{x_k}, \]
-Well-defined if $\sum \abs{x_k}$ is absolutely convergent.
+Well-defined if $\sum_k \abs{x_k}$ is absolutely convergent. ($\sum_k=\sum_{k\in\mathbb Z}$)
 #+LATEX: \end{hidden}
 *** Inverting the Fourier Transform
 
@@ -1398,9 +1398,9 @@ To recover $\b{x}$:
    \theta k} d \theta . \]
 Proof?
 #+LATEX: \begin{hidden}
-\[ x_k = \frac{1}{2 \pi} \int_{- \pi}^{\pi} \sum_j x_j e^{- i \theta j} e^{i
+\[ \frac{1}{2 \pi} \int_{- \pi}^{\pi} \sum_j x_j e^{- i \theta j} e^{i
    \theta k} d \theta = \frac{1}{2 \pi} \sum_j x_j \int_{- \pi}^{\pi} e^{i
-   \theta (k - j)} d \theta = \sum_j x_j \delta_{j, k} . \]
+   \theta (k - j)} d \theta = \sum_j x_j \delta_{j, k} = x_k . \]
 #+LATEX: \end{hidden}
 
 *** Getting to $L^2$
@@ -1434,7 +1434,7 @@ p_{j - k}$. In this case, $\b{p}$ is called the *Toeplitz vector*.
 
 **** Example: ETCS
 Let $\lambda = ah_t / 2 h_x$. Then
-\[ u_{k, \ell + 1} = \lambda u_{k - 1, \ell} + u_{k, l} - \lambda u_{k + 1,
+\[ u_{k, \ell + 1} = \lambda u_{k - 1, \ell} + u_{k, \ell} - \lambda u_{k + 1,
    \ell}.\]
 **** End
      :PROPERTIES:
@@ -1453,7 +1453,7 @@ Is ETCS Toeplitz?
    \end{cases} \qquad p_m = \delta_{0, m}.
 \end{equation*}
 #+LATEX: \end{hidden}
-\((Q_h \b{u}_{\ell})_j = \lambda u_{k - 1, \ell} + u_{k, l} - \lambda u_{k + 1, \ell} \overset{!}{=} \sum_k u_{k, \ell} q_{j - k}\)
+\((Q_h \b{u}_{\ell})_j = \lambda u_{j - 1, \ell} + u_{j, \ell} - \lambda u_{j + 1, \ell} \overset{!}{=} \sum_k u_{k, \ell} q_{j - k}\)
 #+LATEX: \begin{hidden}
 \begin{equation*}
    q_{j - k} = \begin{cases}
@@ -1593,8 +1593,8 @@ Implied by von Neumann stability.
 Why is bounding the symbol the most salient part?
 
 #+LATEX: \begin{hidden}
-If there doesn't exist a $c$ so that $\norm{P_h^{- 1}} \le c$, then
-$\norm{P_h^{- 1} Q_h}$ often also encounters problems.
+If $\norm{P_h^{- 1} Q_h}\le 1$ encounters problems, there there often
+also doesn't exist a $c$ so that $\norm{P_h^{- 1}} \le c$.
 #+LATEX: \end{hidden}
 
 
@@ -1697,7 +1697,7 @@ What could we use as a prototype solution?
 
 *** A Prototype Solution of the PDE
 Observation: all these operators are diagonalized by complex exponentials.
-Come up with a `prototype complex exponetial solution'.
+Come up with a `prototype complex exponential solution'.
 
 #+LATEX: \begin{hidden}
 Let $z (x, t) = z_0 e^{i (kx - \omega t)}$.
