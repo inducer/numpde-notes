@@ -1475,8 +1475,6 @@ Both $P_h$ and $Q_h$ are Toeplitz.
 
 \[ y_j = \sum_k x_k p_{j - k} \]
 #+LATEX: \begin{hidden}
-
-
 \begin{eqnarray*}
   \hat{\b{y}} (\theta) & = & \sum_j \sum_k x_k p_{j - k} e^{- i \theta
   j}\\
@@ -1524,6 +1522,17 @@ Therefore \(\hat{\b{y}} (\theta) = \hat{\b{x}} (\theta) \hat{\b{p}} (\theta)\).
 
 *** Fourier Transforms of Inverse Toeplitz Operators
 
+Recall \((P \b x)_j = \sum_k p_{j - k}x_k\).
+
+\medskip
+What is the Fourier transform $\hat {\b z}(\theta)$ of $P_h^{-1} \b x$?
+#+LATEX: \begin{hidden}
+- Inverse is also Toeplitz (by linearity and translation invariance).
+- Fourier transform of $P_h P_h^{-1} \b x$ is $\hat{\b x}$ for any $\b x$.
+- Therefore $\hat{\b p}(\theta)\hat{\b z}(\theta)=\hat{\b x}(\theta)$.
+- By  uniqueness of Fourier t. (unproven): $\hat{\b z}(\theta)=\frac1{\hat{\b p}(\theta)}\hat{\b x}(\theta)$.
+#+LATEX: \end{hidden}
+
 Fourier transform $P_h^{- 1} Q_h \b{y}$?
 #+LATEX: \begin{hidden}
 \[ \frac{\hat{\b{q}} (\theta)}{\hat{\b{p}} (\theta)}
@@ -1540,12 +1549,11 @@ Bound \(\norm{P_h^{- 1} Q_h}_2^2\) using Fourier:
   = \sup_{\b{x} \neq \b{0}} \frac{\norm{P^{- 1}_h Q_h \b{x}}^2_2}{\norm{\b{x}}^2_2}
   = \sup_{\b{x} \neq \b{0}} \frac{\frac{h_x}{2 \pi} 
     \int_{- \pi}^{\pi} \abs{\frac{\hat{\b{q}} (\theta)}{\hat{\b{p}} (\theta)} \hat{\b{x}} (\theta)}^2 d \theta}{\frac{h_x}{2 \pi} \int_{- \pi}^{\pi} \abs{\hat{\b{x}} (\theta)}^2 d \theta}\\
-  \le \sup_{\b{x} \neq \b{0}} \frac{\max_{\varphi \in [- \pi, \pi]} \abs{\frac{\hat{\b{q}} (\varphi)}{\hat{\b{p}} (\varphi)}} \int_{- \pi}^{\pi} \abs{\hat{\b{x}} (\theta)}^2 d \theta}{\int_{- \pi}^{\pi} \abs{\hat{\b{x}} (\theta)}^2 d \theta}
-  = \max_{\varphi \in [- \pi, \pi]} \abs{\frac{\hat{\b{q}} (\varphi)}{\hat{\b{p}} (\varphi)}} .
+  \le \sup_{\b{x} \neq \b{0}} \frac{\max_{\varphi \in [- \pi, \pi]} \abs{\frac{\hat{\b{q}} (\varphi)}{\hat{\b{p}} (\varphi)}}^2 \int_{- \pi}^{\pi} \abs{\hat{\b{x}} (\theta)}^2 d \theta}{\int_{- \pi}^{\pi} \abs{\hat{\b{x}} (\theta)}^2 d \theta}
+  = \max_{\varphi \in [- \pi, \pi]} \abs{\frac{\hat{\b{q}} (\varphi)}{\hat{\b{p}} (\varphi)}}^2.
 \end{multline*}
-Similarly,
-\[ \norm{P_h^{- 1}}_2^2 \le \max_{\varphi \in [- \pi, \pi]}
-   \abs{1/\hat{\b{p}} (\varphi)} . \]
+
+\[ \text{Similarly,}\qquad \norm{P_h^{- 1}}_2^2 \le \max_{\varphi \in [- \pi, \pi]} \abs{1/\hat{\b{p}} (\varphi)}^2 . \]
 #+LATEX: \end{hidden}
 Is the upper bound attained?
 #+LATEX: \begin{hidden}
@@ -1609,11 +1617,14 @@ Main restriction of von Neumann stability?
 ETBS: Let $\lambda = ah_t / h_x$.
 \( u_{k, \ell + 1} = \lambda u_{k - 1 , \ell} + (1 - \lambda) u_{k, \ell} \).
 #+LATEX: \begin{hidden}
+\vspace{-2ex}
 \[ P_h = I, \qquad Q_h = \tmop{tridiag} (\lambda, 1 - \lambda, 0).\]
 Auxiliary result: Fourier transform of $r_k = \delta_{k, j}$.
 \[ \hat{\b{r}} (\varphi) = \sum_k r_k e^{- i \varphi k} = \sum_k
    \delta_{k, j} e^{- i \varphi k} = e^{- i \varphi j} . \]
-Recall: $\b r$ Toeplitz vector indices are `flipped' compared to matrix entries $\to$ index sign flip
+\((Q_h \b x)_j=\sum_k q_{j-k}x_k\), so\\
+\((Q_h \b x)_0 = q_0 x_0+ x_{-1} q_1 + x_1 q_{-1}+\cdots\), so\\
+\(\b q = (\dots,0,0, 1-\lambda, \lambda,0,\dots)\).
 \[ \hat{\b{p}} (\varphi) = 1, \qquad \hat{\b{q}} (\varphi) =
    \lambda e^{- i \varphi} + (1 - \lambda) = 1 - \lambda (1 - e^{- i \varphi}).\]
 \vspace{-6ex}
@@ -1657,7 +1668,7 @@ So $\hat{\b{p}} (\varphi) = 1$, and
 So
 \[ \max_{\varphi} \abs{s (\varphi)}^2 = \max_{\varphi}
    \abs{\frac{\hat{\b{q}} (\varphi)}{\hat{\b{p}} (\varphi)}}^2 =
-   1 + \lambda^2 \sin (\varphi) \ge 1. \]
+   1 + \lambda^2 \sin^2 (\varphi) \ge 1. \]
 Not von Neumann stable $\Rightarrow$ not Lax-Richtmyer stable.
 #+LATEX: \end{hidden}
 
@@ -1690,7 +1701,7 @@ Crank-Nicolson is unconditionally von Neumann stable.
 Consider /linear/, /continuous/ (not yet discrete) differential operators
 \begin{eqnarray*}
   L_1 u & = & u_t + au_x,\\
-  L_2 u & = & u_t - Du_{\tmop{xx}} + au_x \qquad\text{(D>0)}\\
+  L_2 u & = & u_t - Du_{\tmop{xx}} + au_x \qquad(D>0)\\
   L_3 u & = & u_t + au_x - \mu u_{x x x} .
 \end{eqnarray*}
 What could we use as a prototype solution?
@@ -1732,7 +1743,7 @@ Consider $\omega (k) = \alpha (k) + i \beta (k)$. Rewrite the wave solution with
 #+LATEX: \begin{hidden}
 \vspace{-3ex}
 \begin{eqnarray*}
-  z (x, t) & = & z_0 e^{i (kx - \omega t)}\\
+  z (x, t) & = & z_0 e^{i (kx - \omega(k) t)}\\
   & = & z_0 e^{i (kx - \alpha (k) t - i \beta (k) t)}\\
   & = & z_0 e^{\beta (k) t} e^{i (kx - \alpha (k) t)} .
 \end{eqnarray*}
