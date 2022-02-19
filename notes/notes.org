@@ -39,7 +39,12 @@
 #+BEAMER_HEADER: \newif\ifshowhidden
 #+BEAMER_HEADER: \showhiddentrue
 #+BEAMER_HEADER: \def\fillinbox#1{\begin{tcolorbox}[height=#1]\end{tcolorbox}}
-#+BEAMER_HEADER: \NewEnviron{hidden}[0]{\begin{tcolorbox}\ifshowhidden\BODY\else\phantom{\vbox{\BODY}}\fi\end{tcolorbox}}
+#+BEAMER_HEADER: \ifshowhidden
+#+BEAMER_HEADER:   \NewEnviron{hidden}[0]{\begin{tcolorbox}\BODY\end{tcolorbox}}
+#+BEAMER_HEADER: \else
+#+BEAMER_HEADER:   \NewEnviron{hidden}[0]{\begin{tcolorbox}[colback=white]\phantom{\vbox{\BODY}}\end{tcolorbox}}
+# #+BEAMER_HEADER:   \setbeamercolor{background canvas}{bg=black!7!white}
+#+BEAMER_HEADER: \fi
 
 #+BEAMER_HEADER: \let\plainhref=\href
 #+BEAMER_HEADER: \let\plainurl=\url
