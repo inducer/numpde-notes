@@ -1725,6 +1725,11 @@ What type of function is this?
 *** Wave-like Solutions of the PDE
 
 \[z (x, t) = z_0 e^{i (kx - \omega t)}\]
+
+$L_2 u = u_t - Du_{\tmop{xx}} + au_x$ ($D>0$). Plug in $z$.
+#+LATEX: \begin{hidden}
+$Lz = (- i \omega + iak + Dk^2)z$.
+#+LATEX: \end{hidden}
 Observations in connection with $L$?
 #+LATEX: \begin{hidden}
 - $Lz = \lambda (\omega, k) z$.
