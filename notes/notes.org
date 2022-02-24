@@ -1921,7 +1921,7 @@ If not, the scheme is called *dispersive*.
 Let $\lambda = ah_t / h_x$. Shown earlier: $s (kh_x) = 1 - \lambda (1 - e^{- ikh_x})$.
 
 #+LATEX: \begin{hidden}
-$\abs{s (kh_x)} = 1$ holds on a circle:
+$s(\kappa)=(1-\lambda)+\lambda e^{-i\kappa}$. If we sweep $\kappa$, $s(\kappa)$ traces a circle:
 
 \begin{tikzpicture}[scale=3]
   \def\lam{0.3}
