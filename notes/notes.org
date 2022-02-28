@@ -2345,7 +2345,7 @@ Similarly, we can rewrite the conservation law:
   u_t + f' (u) u_x & = & 0\\
   \Leftrightarrow \quad \eta' (u) u_t + \eta' (u) f' (u) u_x & = & 0.
 \end{eqnarray*}
-This gives us $\psi' (u) = \eta' (u) f' (u)$.
+This gives us $\psi' (u) = -\eta'(u)(u_t/u_x)= \eta' (u) f' (u)$.
 
 Lots of solutions for scalar conservation laws. For systems and in multiple
 dimensions: may have no solutions.
