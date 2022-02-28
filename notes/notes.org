@@ -2159,7 +2159,7 @@ They intersect!
 Define a weak solution:
 #+LATEX: \begin{hidden}
 - If $u$ satisfies the integral form for almost all $(a, b)$ then
-  $u$ is called a weak solution. (physically meaningful, correct)
+  $u$ is called a weak solution. (physically meaningful)
 
 - If for any $\varphi \in C^1_0 (\mathbb{R}\times[0,\infty))$ (compact support),
   \[ - \int_0^{\infty} \int_{- \infty}^{\infty} (u \varphi_t + f (u)
