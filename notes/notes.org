@@ -2095,9 +2095,38 @@ What assumption underlies all this?
 Smooth Solution.
 #+LATEX: \end{hidden}
 
-*** Burger's Equation
+*** Going Nonlinear: Burgers' Equation
+Make a simple modification to advection $u_t+au_x=0$ to make it nonlinear.
+#+LATEX: \begin{hidden}
+$u_t+uu_x=0$
+#+LATEX: \end{hidden}
+Is that a sensible modification?
+#+LATEX: \begin{hidden}
+Yes: it is the core part of the momentum equation in Euler's equations of gas dynamics in 1D.
+\[\partial_t \b u +\b u\cdot \nabla \b u +\frac{\nabla p}\rho =\b g\]
+#+LATEX: \end{hidden}
+Is that still a conservation law?
+#+LATEX: \begin{hidden}
+Yes: $u_t+(u^2/2)_x=0$. Called *Burgers' Equation*.
+#+LATEX: \end{hidden}
 
-Consider *Burgers' Equation*:
+*** Burgers' Equation: Try FD Numerics
+
+\demolink{fv-hyperbolic}{ETBS for Volume Burgers}
+
+\bigskip
+What do you think of these results?
+#+LATEX: \begin{hidden}
+No good, very bad. Conservation of $\int u$ should hold at least to the
+order of accuracy of the scheme!
+
+\medskip
+We clearly need to rethink our plan here.
+We will begin by learning about the theory of conservation laws.
+#+LATEX: \end{hidden}
+
+*** Burgers' Equation
+
 \begin{equation*}
   \label{eq:burgers-sin} \left\{\begin{array}{l}
     u_t + \left( \frac{u^2}{2} \right)_x = 0,\\
@@ -2105,7 +2134,7 @@ Consider *Burgers' Equation*:
   \end{array}\right.
 \end{equation*}
 
-Interpret Burger's equation.
+Interpret Burgers' equation.
 #+LATEX: \begin{hidden}
 $f(u)=u^2/2$. So $f'(u)=u$.
 
