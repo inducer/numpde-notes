@@ -2426,8 +2426,8 @@ so that
    (x, t_1)) d x - \underbrace{\left[ \int_{t_1}^{t_2} \psi (u (x, t)) d t
    \right]_{x_1}^{x_2}}_{\text{Outflow/Inflow}} \]
 If $u$ is compactly supported, then we can choose $x_1$ and $x_2$ on either
-side of $u$'s support and obtain that entropy can only decrease. (Physically,
-entropy only increases. Could have chosen concave for that.)
+side of $u$'s support and obtain that entropy can only decrease.
+(fluid flow: $\text{math. entropy} = - \rho \cdot \text{phys. entropy}$)
 #+LATEX: \end{hidden}
 
 *** Total Variation
