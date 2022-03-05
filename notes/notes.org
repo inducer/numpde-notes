@@ -2425,8 +2425,8 @@ so that
 \[ \int_{x_1}^{x_2} \eta (u (x, t_2)) d x \le \int_{x_1}^{x_2} \eta (u
    (x, t_1)) d x - \underbrace{\left[ \int_{t_1}^{t_2} \psi (u (x, t)) d t
    \right]_{x_1}^{x_2}}_{\text{Outflow/Inflow}} \]
-If $u$ is compactly supported, then we can choose $x_1$ and $x_2$ on either
-side of $u$'s support and obtain that entropy can only decrease.
+If $u$ is compactly supported, then we can choose $x_1$ and $x_2$ 
+so that $\psi(u(x_1,t))\equiv \text{const}(t)\equiv \psi(u(x_2,t))$ and entropy can only decrease.
 (fluid flow: $\text{math. entropy} = - \rho \cdot \text{phys. entropy}$)
 #+LATEX: \end{hidden}
 
