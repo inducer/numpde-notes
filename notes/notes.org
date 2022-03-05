@@ -2410,6 +2410,43 @@ is satisfied in the weak sense.
      :BEAMER_env: ignoreheading
      :END:
 
+*** Entropy Solution vs Entropy Condition
+
+Relate entropy solutions \( \eta (u)_t + \psi (u)_x \le 0 \) back to the entropy condition.
+#+LATEX: \begin{hidden}
+Consider Burgers, integrate the entropy ineq. over a small box:
+#+BEGIN_EXPORT latex
+\begin{tikzpicture}[scale=0.6]
+    \draw (0,0) .. controls ++(45:3) .. (7,3)
+        node (bl) [pos=0.1] {} 
+        node (tr) [pos=0.9] {};
+    \draw (bl) rectangle (tr)
+      let \p1 = (bl), \p2 = (tr), \p{tl} = (\x1, \y2), \p{br} = (\x2, \y1)
+      in (\p{tl}) node (tl) {} (\p{br}) node (br) {};
+    
+    \draw (bl) ++(0, -0.25) node [anchor=north] {$x_1$};
+    \draw (br) ++(0, -0.25) node [anchor=north] {$x_1+\Delta x=x_1+s_1 \Delta t$};
+    \draw (bl) ++(-0.25, 0) node [anchor=east] {$t_1$};
+    \draw (tl) ++(-0.25, 0) node [anchor=east] {$t_1+\Delta t$};
+    
+    \draw (tl) node [anchor=north west] {$u\approx u_l$};
+    \draw (br) node [anchor=south east] {$u\approx u_r$};
+\end{tikzpicture}
+#+END_EXPORT
+
+\vspace{-5ex}
+\begin{align*}
+0&\ge\left[ \int_{x_1}^{x_1+\Delta x} u^2\right]_{t_1}^{t_1+\Delta t}
++\left[ \int_{t_1}^{t_1 +\Delta t} 2u^3/3\right]_{x_1}^{x_1 +\Delta x}\\
+&=s_1\Delta t (u_l^2 -u_r^2) +2/3\Delta t (u_r^3-u_l^3) +O(\Delta t^2)\\
+&=\Delta t(u_l^2 -u_r^2)(s_1-s_2) +O(\Delta t^2)\\
+&=-1/6 (u_l-u_r)^3\Delta t+O(\Delta t^2)\quad \to \quad u_l > u_r,
+\end{align*}
+with $s_1=[u^2/2]/[u]$, $s_2=[2u^3/3]/[u^2]$, $s_2-s_1=[u]^2/(6(u_l+u_r))$.
+
+#+LATEX: \end{hidden}
+# Source: Leveque 1992, p. 40
+
 *** Conservation of Entropy?
 
 What can you say about conservation of entropy in time?
