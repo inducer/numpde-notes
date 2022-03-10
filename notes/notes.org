@@ -2363,7 +2363,7 @@ u$, i.e. $\psi (u) = 2 u^3 / 3$.
 What's the evolution equation for the entropy?
 #+LATEX: \begin{hidden}
 Note: Viscosity solutions are always smooth. Allowed to do derivative
-gymnastics.
+gymnastics. Multiply by $\eta'(u)$:
 \begin{eqnarray*}
   \eta' (u) u_t + \eta' (u) f' (u) u_x & = & \varepsilon \eta' (u) u_{x x}\\
   \Leftrightarrow \quad \eta (u)_t + \psi (u)_x & = & \varepsilon (\eta' (u)
@@ -2377,7 +2377,7 @@ gymnastics.
   \eta (u)_t + \psi (u)_x = \varepsilon (\eta' (u)
   u_x)_x - \varepsilon \eta'' (u) u_x^2 .
 \end{equation*}
-Integrate this over $[x_1, x_2] \times [t_1, t_2]$.
+Integrate this over $[x_1, x_2] \times [t_1, t_2]$, with $x_1$, $x_2$ on either side of jump.
 #+LATEX: \begin{hidden}
 \vspace{-3ex}
 \begin{eqnarray*}
@@ -2588,7 +2588,7 @@ $u$ is a weak solution of the conservation law.
   (\Delta^+ a_k) = - a_1 \varphi_0 + \varphi_N a_{N + 1}.
 \end{equation*}
 #+LATEX: \begin{hidden}
-Let $\varphi_{j,\ell} = \varphi (x_j, t_\ell)$ for $\varphi \in C^1_0$ (compact support). Then
+Let $\varphi_{j,\ell} = \varphi (x_j, t_\ell)$ for $\varphi \in C^1_0$ (compact support). Then, by conservativity,
 \begin{eqnarray*}
   &   & 0=\sum_{\ell=1}^\infty \sum_j \left(  \frac{\Delta_2^+u_{j,\ell }}{h_ t} +
   \frac{\Delta^+ f^*_{j - 1 / 2}}{h_ x} \right)
