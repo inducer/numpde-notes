@@ -2612,10 +2612,6 @@ Finite volume: Idea?
   \[\bar{u}_j=(1/h_x) \int_{x_{j-1/2}}^{x_{j+1/2}} u(x) dx\]
 - Choose $h_x$, $h_t$ so that \(\max |f' (u) | h_ t < h_ x\).
 
-Then in a sequence of cells $(A, B, C, D, E)$, the solution in cell $C$
-in the next timestep is not influenced at all by the solution in cells $A$ and
-$E$.
-
 \medskip
 *Idea:* Solve Riemann problem at each cell interface.
 #+LATEX: \end{hidden}
@@ -2671,9 +2667,9 @@ Overall algorithm?
 #+LATEX: \begin{hidden}
 - *Reconstruct* $u_{j \pm 1 / 2,\ell}^-$ and $u_{j \pm 1 / 2,\ell}^+$
 - *Evolve* the Riemann problem at $x_{j\pm 1/2}$:
-
-  *Numerical flux* / *Riemann solver*: \(f^*(u_{j \pm 1 / 2,\ell}^-, u_{j \pm 1 / 2,\ell}^+)\)
 - *Average* the Riemann solutions to obtain $\bar{u}_{j,\ell+1}$
+
+\to *Numerical flux* / *Riemann solver*: \(f^*(u_{j \pm 1 / 2,\ell}^-, u_{j \pm 1 / 2,\ell}^+)\)
 #+LATEX: \end{hidden}
 Heuristic time step restriction?
 #+LATEX: \begin{hidden}
@@ -2712,10 +2708,8 @@ Why is the rarefaction part independent of $u_l$ and $u_r$?
 
 To complete the scheme: Need $f^*(u^-, u^+)$. For Burgers: already known.
 
-For a general (convex/concave-$f$) conservation law?
+For a general convex ($f'' (u) > 0$) conservation law?
 #+LATEX: \begin{hidden}
-Assume $f'' (u) > 0$.
-
 Let $u_s$ such that $f' (u_s) = 0$ (called the *stagnation state*: why?)
 \[ f^{\ast} (u^-, u^+) = \begin{cases}
      f (u^-) & \text{if shock with $s > 0$},\\
