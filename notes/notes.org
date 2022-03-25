@@ -2704,7 +2704,7 @@ Exact solution in the Burgers case?
    u_l^2]}{u_r - u_l} = \frac{1}{2} (u_l + u_r) . \]
 Why is the rarefaction part independent of $u_l$ and $u_r$?
 #+LATEX: \end{hidden}
-*** Rieamnn Solver for a General Conservation Law
+*** Riemann Solver for a General Conservation Law
 
 To complete the scheme: Need $f^*(u^-, u^+)$. For Burgers: already known.
 
@@ -2722,11 +2722,13 @@ Let $u_s$ such that $f' (u_s) = 0$ (called the *stagnation state*: why?)
 #+LATEX: \end{hidden}
 
 Equivalent to
+#+LATEX: \begin{hidden}
 \[ f^{\ast} (u^-, u^+) = \begin{cases}
      \max_{u^+ \le u \le u^-} f (u) & \text{if $u^- > u^+$},\\
      \min_{u^{_-} \le u \le u^+} f (u) & \text{if $u^- \le
      u^+$} .
    \end{cases} \]
+#+LATEX: \end{hidden}
 *** More Riemann Solvers
 
 Downside of Godunov Riemann solver?
