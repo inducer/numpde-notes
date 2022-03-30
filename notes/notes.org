@@ -2711,12 +2711,12 @@ To complete the scheme: Need $f^*(u^-, u^+)$. For Burgers: already known.
 For a general convex ($f'' (u) > 0$) conservation law?
 #+LATEX: \begin{hidden}
 Let $u_s$ such that $f' (u_s) = 0$ (called the *stagnation state*: why?)
-\[ f^{\ast} (u^-, u^+) = \begin{cases}
+\[ f(u(0,t))= f^{\ast} (u^-, u^+) = \begin{cases}
      f (u^-) & \text{if shock with $s > 0$},\\
      f (u^+) & \text{if shock with $s \le 0$},\\
-     f (u^-) & \text{if rarefaction with $f' (u^-) \ge 0$},\\
-     f (u^+) & \text{if rarefaction with $f' (u^+) \le 0$},\\
-     f (u_s) & \text{if rarefaction with $f' (u^-) \le 0 \le f'
+     f (u^-) & \text{if raref. with $f' (u^-) \ge 0$},\\
+     f (u^+) & \text{if raref. with $f' (u^+) \le 0$},\\
+     f (u_s) & \text{if raref. with $f' (u^-) \le 0 \le f'
      (u^+)$} .
    \end{cases} \]
 #+LATEX: \end{hidden}
