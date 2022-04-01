@@ -2835,15 +2835,15 @@ Include more cells in the *reconstruction* of the state $u_{j + 1 / 2}^{\pm}$.
 
 /Temporary Assumptions:/
 - $f' (u) \ge 0$
-- $f^*_{j + 1 / 2} = f (\bar{u}_j)$ (e.g. Godunov in this situation)
+- $f^*_{j + 1 / 2} (u^-,u^+)= f (u^-)$ (e.g. Godunov in this situation)
 
 \medskip
 Reconstruct $u_{j + 1 / 2}$ using $\{ \bar{u}_{j - 1}, \bar{u}_j, \bar{u}_{j + 1} \}$. Accuracy? Names?
 #+LATEX: \begin{hidden}
 \vspace{-3ex}
 \begin{eqnarray*}
-  u^{(1)}_{j + 1 / 2} & = & \frac{1}{2} (\bar{u}_j + \bar{u}_{j + 1}), \qquad \text{(2nd order central)}\\
-  u^{(2)}_{j + 1 / 2} & = & \frac{3}{2} \bar{u}_j - \frac{1}{2} \bar{u}_{j - 1},
+  u^{-, (1)}_{j + 1 / 2} & = & \frac{1}{2} (\bar{u}_j + \bar{u}_{j + 1}), \qquad \text{(2nd order central)}\\
+  u^{-, (2)}_{j + 1 / 2} & = & \frac{3}{2} \bar{u}_j - \frac{1}{2} \bar{u}_{j - 1},
   \qquad \text{(2nd order upwind)}
 \end{eqnarray*}
 #+LATEX: \end{hidden}
@@ -2864,11 +2864,11 @@ Compute fluxes, use increments over cell average:
 
 *** Lax-Wendroff
 
-For $u_t + au_x$, from finite difference:
+Another scheme for high-order. For $u_t + au_x$, from finite difference:
 \[ f^{\ast} (u^-, u^+) = \frac{au^- + au^+}{2} - \frac{a^2}{2} \cdot
    \frac{\Delta t}{\Delta x} (u^+ - u^-) . \]
 Taylor in time: $u_{\ell + 1} = u_{\ell} + \partial_t u_{\ell} \cdot h_t +
-\partial_t^2 u_{\ell} \cdot h_t / 2 + O (h_t^3)$.
+\partial_t^2 u_{\ell} \cdot h_t^2 / 2 + O (h_t^3)$.
 #+LATEX: \begin{hidden}
 \vspace{-3ex}
 \begin{eqnarray*}
@@ -2877,7 +2877,7 @@ Taylor in time: $u_{\ell + 1} = u_{\ell} + \partial_t u_{\ell} \cdot h_t +
   (u)_x)_x .
 \end{eqnarray*}
 #+LATEX: \end{hidden}
-\vspace{-3ex}
+Then use central differences to discretize derivatives:
 \begin{multline*}
    \frac{u_{j, \ell + 1} - u_{j, \ell}}{h_t} + \frac{f (u_{j + 1, \ell}) - f
    (u_{j - 1, \ell})}{2 h_x} \\
@@ -2885,8 +2885,7 @@ Taylor in time: $u_{\ell + 1} = u_{\ell} + \partial_t u_{\ell} \cdot h_t +
    f' (u_{j + 1 / 2, \ell}) \frac{f (u_{j + 1, \ell}) - f (u_{j, \ell})}{h_x}
    - f' (u_{j - 1 / 2, \ell}) \frac{f (u_{j, \ell}) - f (u_{j - 1, \ell})}{h_x} \right]
 \end{multline*}
-As a Riemann solver:
-\[ f^{\ast} (u^-, u^+) = \frac{f (u^-) + f (u^+)}{2} - \frac{h_t}{h_x} [f'
+\[\text{As Riemann solver: } f^{\ast} (u^-, u^+) = \frac{f (u^-) + f (u^+)}{2} - \frac{h_t}{h_x} [f'
    (u^{\circ}) (f (u^+) - f (u^-))] . \]
 *** Monotone Schemes
 
@@ -2932,8 +2931,8 @@ Show: This is monotone.
 #+LATEX: \begin{hidden}
 Let $\alpha = \max_u |f' (u)|$.
 \begin{eqnarray*}
-  f^*_1 & = & \frac{1}{2} [f' (u_j) + \alpha] \ge 0,\\
-  f^*_2 & = & \frac{1}{2} [f' (u_{j + 1}) - \alpha] \le 0.
+  f^*_1 & = & \frac{1}{2} [f' (u^-) + \alpha] \ge 0,\\
+  f^*_2 & = & \frac{1}{2} [f' (u^+) - \alpha] \le 0.
 \end{eqnarray*}
 So $f^* (\uparrow, \downarrow)$. Assume $h_t$ is chosen
 small enough so that $\lambda (f^*_1 - f^*_2) \le 1$ is
@@ -3062,9 +3061,8 @@ We have omitted the time subscript for the time level $\ell$.
   %%%%%%%%%%%%%%%%%%%
   & = & [1 - \lambda (C_{j + 1 / 2} + D_{j + 1 / 2})] \Delta_+ \bar{u}_j \\
   & &+ \lambda C_{j + 3 / 2} \Delta_+ \bar{u}_{j + 1} + \lambda D_{j - 1 / 2}
-  \Delta_- \bar{u}_j .\\[1ex]
-  %%%%%%%%%%%%%%%%%%%
-  \abs{ \Delta_+ \bar{u}_{j,\ell + 1} } & \le &
+  \Delta_- \bar{u}_j .\\
+  \abs{ \Delta_+ \bar{u}_{j,\ell + 1} } & \stackrel{C,D,\dots\ge 0}{\le} &
   [1 - \lambda (C_{j + 1 / 2} + D_{j + 1 / 2})] | \Delta_+ \bar{u}_j |  \\
   && + \lambda \underbrace{C_{j + 3 / 2} | \Delta + \bar{u}_{j + 1} |}_{C_{j' + 1 / 2} | \Delta_+ \bar{u}_{j'} |}
   + \lambda \underbrace{D_{j - 1 / 2} | \Delta_- \bar{u}_j |}_{D_{j'' + 1 / 2} | \Delta_+ \bar{u}_{j''} |} .\\
@@ -3118,11 +3116,12 @@ Rewrite
 \end{equation*}
 with
 \begin{eqnarray*}
-  D_{j - 1 / 2} & = & \frac{f (\bar{u}_j + \tilde{u}_j) - f (\bar{u}_{j - 1} +
+  D_{j - 1 / 2} 
+  & = & \frac{f (\bar{u}_j + \tilde{u}_j) - f (\bar{u}_{j - 1} +
   \tilde{u}_{j - 1})}{\bar{u}_j - \bar{u}_{j - 1}} = f' (\xi) \frac{\bar{u}_j
   - \bar{u}_{j - 1} + \tilde{u}_j - \tilde{u}_{j - 1}}{\bar{u}_j - \bar{u}_{j
   - 1}}\\
-  & = & \underbrace{f' (\xi)}_{\ge 0} \left[ 1 + \underbrace{\frac{\tilde{u}_j}{\bar{u}_j -
+  & = & \underbrace{f' (\xi)}_{\ge 0 \text{(by ass.)}} \left[ 1 + \underbrace{\frac{\tilde{u}_j}{\bar{u}_j -
   \bar{u}_{j - 1}}}_{0 \le \cdot \le \frac{1}{2}} -
   \underbrace{\frac{\tilde{u}_{j - 1}}{\bar{u}_j - \bar{u}_{j - 1}}}_{0
   \le \cdot \le \frac{1}{2}} \right] \ge 0.
