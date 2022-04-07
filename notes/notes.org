@@ -48,7 +48,7 @@
 
 #+BEAMER_HEADER: \let\plainhref=\href
 #+BEAMER_HEADER: \let\plainurl=\url
-#+BEAMER_HEADER: \def\href#1#2{\plainhref{#1}{{\color{blue}\uline{#2}}}}
+#+BEAMER_HEADER: \def\href#1#2{\plainhref{#1}{{\color{orange}\uline{#2}}}}
 #+BEAMER_HEADER: \def\url#1{\href{#1}{\texttt{#1}}}
 
 #+BEAMER_HEADER: \def\classurl{https://relate.cs.illinois.edu/course/cs450-s19/}
@@ -2957,7 +2957,7 @@ satisfied.
 
 *** Godunov's Theorem
 
-**** Godunov
+**** Godunov, see also [[https://doi.org/10.1002/cpa.3160290305][Harten/Hyman/Lax/Keyfitz `76]]
      :PROPERTIES:
      :BEAMER_env: theorem
      :END:
@@ -2967,6 +2967,8 @@ Monotone schemes are at most first-order accurate.
      :PROPERTIES:
      :BEAMER_env: ignoreheading
      :END:
+
+
 
 What now?
 #+LATEX: \begin{hidden}
@@ -3177,12 +3179,15 @@ With $0\le \alpha \le 1$:
 
 Can TVD schemes be high order everywhere? (aside from near shocks)
 #+LATEX: \begin{hidden}
-#+ATTR_LATEX: :height 4cm
+#+ATTR_LATEX: :height 3.5cm
 Consider $u_t+u_x=0$.
 [[./media/tvd-smooth-extrema.pdf]]
 
-The solution has an error of $h_x^2$, which means the approximation to
-the derivative has error $h_x$: first order. [Osher/Chakravarthy `84]
+Clearly $f'(u)\ne0$ near local max. (otherwise assume) Everything smooth: use derivatives.
+According to picture, $u_h-u=O(h^2)$.
+
+Plausibly, then $f(u_h)_x-f(u)_x=f'(u)(u-u_h)_x =O(h)$, yielding first-order accuracy.
+See also [Osher/Chakravarthy `84, Lemma 2.3].
 #+LATEX: \end{hidden}
 
 *** High Order at Smooth Extrema
@@ -3213,7 +3218,7 @@ Linear system of hyperbolic conservation laws, $A \in \mathbb{R}^{m \times m}$:
 Assumptions on $A$?
 
 #+LATEX: \begin{hidden}
-System is hyperbolic [cf. Loret `08] if $A$ is diagonalizable with real
+System is hyperbolic [cf. [[https://people.maths.bris.ac.uk/~maajh/methods/chap1.pdf][Hogg `17]]] if $A$ is diagonalizable with real
 eigenvalues.
 
 \medskip
