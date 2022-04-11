@@ -3146,13 +3146,15 @@ Plugging this into the Harten CFL bound gives:
    \frac{u_{\ell}}{2} + \frac{1}{2} (u^{(1)} + h_t L (u^{(1)})) . \]
 Above: A version of RK2 with $L$ the ODE RHS. Will this cause wrinkles?
 #+LATEX: \begin{hidden}
-Use: TV is convex. $TV(\alpha \b u+(1-\alpha) \b v) \le \alpha TV(\b u) +(1-\alpha)TV(\b v)$.
+- $\tmop{TV}(\b u + h_t L (\b u))\le\tmop{TV}(\b u)$ (via Harten's L.)
+- TV convex. $TV(\alpha \b u+(1-\alpha) \b v) \le \alpha TV(\b u) +(1-\alpha)TV(\b v)$
 \begin{eqnarray*}
-  \tmop{TV} (u_{\ell + 1}) & = & \tmop{TV} \left( \frac{u_{\ell}}{2} +
+  && \tmop{TV} (u_{\ell + 1})
+  = \tmop{TV} \left( \frac{u_{\ell}}{2} +
   \frac{1}{2} (u^{(1)} + h_t L (u^{(1)})) \right)\\
   & \le & \frac 12\tmop{TV} \left( u_{\ell} \right) + \frac{1}{2} \tmop{TV} (u^{(1)} + h_t L (u^{(1)}))\\
-  & \overset{\text{TVD}}{\le} & \frac 12\tmop{TV} \left( u_{\ell} \right) + \frac{1}{2} \tmop{TV} (u^{(1)}) \\
-  &\overset{\text{TVD}}{\le} & \frac 12\tmop{TV} \left( u_{\ell} \right) + \frac{1}{2} \tmop{TV}
+  & \overset{\text{TVD}}{\le} & \frac 12\tmop{TV} \left( u_{\ell} \right) + \frac{1}{2} \tmop{TV} (u^{(1)}) 
+  \overset{\text{TVD}}{\le} \frac 12\tmop{TV} \left( u_{\ell} \right) + \frac{1}{2} \tmop{TV}
   (u_{\ell}) = \tmop{TV} (u_{\ell}).
 \end{eqnarray*}
 
