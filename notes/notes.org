@@ -3590,7 +3590,7 @@ Let $\Omega$ be open.
 $L^2(\Omega)$ equals the closure of (set of all imits of Cauchy sequences in)
 $C_0^{\infty} (\Omega)$ under the induced norm $\norm{\cdot}_2$.
 
-**** Hilbert Projection
+**** Hilbert Projection (e.g. Yosida `95, Thm. III.1)
      :PROPERTIES:
      :BEAMER_env: theorem
      :END:
