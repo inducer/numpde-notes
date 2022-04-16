@@ -3477,7 +3477,7 @@ Assume $(f_i)_i$ is Cauchy.
 Let $\Omega \subseteq \mathbb{R}^n$.
 
 \medskip
-Consider a *multi-index* $\b{k}= (k_1, \ldots, k_n)$ and define the symbols
+Consider a *multi-index* $\b{k}= (k_1, \ldots, k_n)\in\mathbb N_0^n$ and define the symbols
 #+LATEX: \begin{hidden}
 \[ D^{\b{k}} f = \frac{\partial^{\abs{\b{k}}}}{\partial
    x_1^{k_1} \cdots \partial x_n^{k_n}}, \qquad \abs{\b{k}} = k_1 +
@@ -3587,7 +3587,7 @@ Let $\Omega$ be open.
      :BEAMER_env: theorem
      :END:
 
-$L^2(\Omega)$ equals the closure of (set of all imits of Cauchy sequences in)
+$L^2(\Omega)$ equals the closure of (set of all limits of Cauchy sequences in)
 $C_0^{\infty} (\Omega)$ under the induced norm $\norm{\cdot}_2$.
 
 **** Hilbert Projection (e.g. Yosida `95, Thm. III.1)
