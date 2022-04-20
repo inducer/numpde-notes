@@ -2860,7 +2860,10 @@ Compute fluxes, use increments over cell average:
 \end{equation*}
 #+LATEX: \end{hidden}
 
-\demolink{fv-hyperbolic}{Finite Volume Burgers} (Part II)
+*** Demos: Spatial Accuracy
+
+- \demolink{fv-hyperbolic}{Higher-Order Reconstruction}
+- \demolink{fv-hyperbolic}{Finite Volume Burgers} (Part II)
 
 *** Lax-Wendroff
 
@@ -3766,7 +3769,7 @@ is a linear function $g : V \rightarrow \mathbb{R}$. It is *bounded*
 Let $\left( V, \norm{\cdot} \right)$ be a Banach space. Then the *dual space*
 $V'$ is the space of bounded linear functionals on $V$.
 
-**** Dual Space is Banach (cf. e.g. Yosida 1995 Thm. IV.7.1)
+**** Dual Space is Banach (cf. e.g. Yosida `95 Thm. IV.7.1)
 
 $V'$ is a Banach space with the *dual norm*
 #+LATEX: \begin{hidden}
