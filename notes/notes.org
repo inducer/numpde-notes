@@ -3140,7 +3140,7 @@ Plugging this into the Harten CFL bound gives:
 \[ 1 - \lambda D_{j - 1 / 2} \ge 1 - \frac{3}{2} \lambda \max_u |f' (u) |
    \ge 0 \Leftarrow \begin{array}{|l|}
      \hline
-     \lambda \max |f' (\xi) | \le \frac{2}{3} .\\
+     \lambda \max_u |f' (u) | \le \frac{2}{3} .\\
      \hline
    \end{array} \]
 #+LATEX: \end{hidden}
