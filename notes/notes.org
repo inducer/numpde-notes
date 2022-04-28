@@ -4341,7 +4341,7 @@ Find the discrete system.
 We may as well choose the basis $(\varphi_i)$ to represent $\varphi \in V_h$:
 \[ a \left( \sum_{i = 1}^n u_h^i \varphi_i, \varphi_j \right) = \ip{f}{\varphi_j} \quad
    \text{for all } j \in \{1, \ldots, n\} . \]
-This /could/ lead to a linear system $Au = b$, where $A = \{a_{i, j} \} \in
+This /could/ lead to a linear system $A \b u = \b b$, where $A = \{a_{i, j} \} \in
 \mathbb{R}^{n \times n}$ with $a_{i, j} = a (\varphi_i, \varphi_j)$, $u = \{u_h^i
 \}$, $b_j = \ip{f}{\varphi_j}$, but we choose not to go this route.
 #+LATEX: \end{hidden}
