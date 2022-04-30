@@ -4304,14 +4304,14 @@ Plugging into the norm relationship yields
    \right], \]
 If $u \in H^1_0 (\Omega)$, what do we get from Aubin-Nitsche?
 #+LATEX: \begin{hidden}
-As before (e.g. Poisson: symmetry of $a$: *primal* prob. = dual prob.):
+E.g. Poisson+$u\in H^1_0$: symmetry of $a$: *primal* prob. = dual prob.:
 \[
   \inf_{v_h \in V_h} \norm{\varphi_g - v_h}_{H^1}
    \le C \norm{\varphi_g - I_h \varphi_g}_{H^1}\\
    \le C_1 h \norm{\varphi_g}_{H^2}
-   \le c_2 h \norm{g}_{L^2}.
+   \le c_2 h \norm{g}_{L^2},
 \]
-So
+i.e. same bounds as before. So
 \( \norm{u - u_h}_{L^2} \le Ch \norm{u - u_h}_{H^1}\).
 #+LATEX: \end{hidden}
 
@@ -4440,7 +4440,7 @@ If $v \in H^1 (\Omega) \setminus H^2 (\Omega)$,
   \lim_{h \rightarrow 0} \seminorm{(v - I^1_h v)}_{H^1} & = & 0.
 \end{eqnarray*}
 #+LATEX: \end{hidden}
-Is $I^1_h$ defined for $v\in H^2$? for $v\in H^1\setminus H^2$?
+In general (not just 1D), is $I^1_h$ defined for $v\in H^2$? for $v\in H^1\setminus H^2$?
 #+LATEX: \begin{hidden}
 Depends on the dimension $n$ and the domain $\Omega$. Need to consider the *Sobolev Embedding Theorem*.
 #+LATEX: \end{hidden}
