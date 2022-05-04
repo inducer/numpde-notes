@@ -8,7 +8,7 @@ in the [Department of Computer Science](https://cs.illinois.edu/)
 at the [University of Illinois](https://illinois.edu/), based on prior versions of the
 class taught by Luke Olson.
 
--   [PDF](https://andreask.cs.illinois.edu/cs555-s20/notes.pdf) of these slides/notes (see `notes`
+-   [PDF](https://andreask.cs.illinois.edu/cs555-s22/notes.pdf) of these slides/notes (see `notes`
     for source)
 
 -   [Demos](https://mybinder.org/v2/gh/inducer/numpde-notes/main?filepath=demos)
