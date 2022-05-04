@@ -5070,6 +5070,7 @@ Altogether:
 
 *** Demo
 
+- \demolink{fe-elliptic}{Meshing and Connectivity for FEM in 2D}
 - \demolink{fe-elliptic}{Developing FEM in 2D}
 - \demolink{fe-elliptic}{2D FEM Using Firedrake}
 - \demolink{fe-elliptic}{Rates of Convergence}
