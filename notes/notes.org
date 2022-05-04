@@ -5004,7 +5004,7 @@ How might we accomplish curvilinear elements using the same idea?
 Construct a basis on the element $E_m$ from the reference basis
 $(\hat{\varphi}_j)_{j = 1}^{N_p} : E_m \rightarrow \mathbb{R}$.
 #+LATEX: \begin{hidden}
-\[ \varphi_{i, j} (\b{x}) = \hat{\varphi}_j (T_m^{- 1} (\b{x})) . \]
+\[ \varphi_j (\b{x}) = \hat{\varphi}_j (T_m^{- 1} (\b{x})) . \]
 #+LATEX: \end{hidden}
 
 What's the gradient of this basis?
