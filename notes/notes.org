@@ -5995,7 +5995,7 @@ No: coeff. on the wrong side of the $\nabla \cdot$. Only OK for constant-coeff.
 *** Solving $q_t+aq_x=0$: Finite Differences
 
 #+BEGIN_CENTER
-\begin{tikzpicture}
+\begin{tikzpicture}[scale=0.8]
   \draw [->] (-3,0) -- ++(6,0);
   \draw [->] (0,-0.5) -- ++(0,2.5);
   \draw [thick, green,domain=-2.5:2.5] plot[mark=x,smooth] (\x,{sin(\x*180)+0.75}) ;
@@ -6214,7 +6214,7 @@ For each cell $E_k$, find a ref-to-global map $T_k$:
 
 Based on knowledge of how to do this on $\hat E$:
 
-\bigskip
+\medskip
 Can now /integrate/ on $\Omega$:
 #+LATEX: \begin{hidden}
 \[
@@ -6226,6 +6226,7 @@ Can now /integrate/ on $\Omega$:
 
 and /differentiate/ on $\Omega$:
 #+LATEX: \begin{hidden}
+\vspace*{-1ex}
 \[
   \frac{\partial f}{\partial \b x}
   =
@@ -6236,6 +6237,7 @@ and /differentiate/ on $\Omega$:
 
 Jacobian of $T_k^{-1}$?
 #+LATEX: \begin{hidden}
+\vspace*{-1ex}
 \[
   \frac{d \b x}{d\b r}
   \frac{d \b r}{d\b x}
