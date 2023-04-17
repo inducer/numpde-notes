@@ -6835,6 +6835,23 @@ J_3 \hat n \cdot  (F^*) | _{A_3}
 \end{multline*}
 #+LATEX: \end{hidden}
 
+*** Dealing with Nonlinearity
+
+\[0 =
+  \int_{E_k} q_t^k \phi dx  -\int_{E_k} F^k(q_k) \cdot \nabla \phi dx
+  +\int_{\partial E_k} (F^k(q_k) \cdot n)^* \phi dx \]
+What happens if $F$ is nonlinear (in volume/surface)?
+#+LATEX: \begin{hidden}
+- Good news: Stability proof stays largely intact
+  - But: requires that integrals are evaluated *exactly*. A tall order.
+- Inexact quadrature (a *variational crime*) drives aliasing instabilities
+  - *Overintegration:* Use higher-order quadrature. (But what about terms like $q^{1.4}$?)
+  - *Filtering:* Damp out the highest polynomial modes
+  - Make the scheme *discretely stable* \to *Entropy-stable DG*
+- Shocks may arise for nonlinear $F$, drive oscillation (*Gibbs' phenomenon*)
+  - Oscillations drive further instabilities
+#+LATEX: \end{hidden}
+
 *** DG and Modern Computers: Possible Advantages
 DG on modern processor architectures: Why?
 
