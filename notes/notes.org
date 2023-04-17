@@ -6472,7 +6472,7 @@ More ideas?
 Unit considerations suggest: $\alpha=\pm an_x^-\overset{!}\ge 0$.
 
 \medskip
-Called the *upwind flux* (aka local L-F)
+Familiar as *Rusanov* or *Local Lax-Friedrichs*. In this simple case: also the *upwind flux*.
 
 - Observe: $(*)<0$ $\Rightarrow$ dissipative!
 - Quite good in practice.
