@@ -6341,11 +6341,11 @@ In DG: what provides accuracy? what provides stability?
   \int_{E_k} q_t^k \phi dx  -\int_{E_k} F^k\cdot\nabla \phi dx
   +\int_{\partial E_k} (F^k \cdot \hat{\b n}) \phi dS_x \]
 #+LATEX: \begin{hidden}
-Trick: Set $\phi = q$. Specialize $F(u):=(a u, 0,0)^T =ae_xu$.
+Trick: Set $\phi = q$. Specialize $F(u):=(a u, 0,0)^T =a\b e_xu$.
 \begin{align*}
   0
-  &= \int_{E_k} q_t^k q_k dx  -\int_{E_k} a q_k e_x\cdot \nabla q_k dx
-  +\int_{\partial E_k} (a q_k e_x \cdot \hat{\b n})^* q_k dS_x\\
+  &= \int_{E_k} q_t^k q_k dx  -\int_{E_k} a q_k \b e_x\cdot \nabla q_k dx
+  +\int_{\partial E_k} (a q_k \b e_x \cdot \hat{\b n})^* q_k dS_x\\
     &= \int_{E_k} q_t^k q_k dx  -\int_{E_k} a q_k \partial_x q_k dx
     +\int_{\partial E_k} (a q_k n_x)^* q_k dS_x\\
     &= \frac{\partial_t}2 \int_{E_k} q_k q_k dx  -\int_{E_k} a q_k \partial_x q_k dx
