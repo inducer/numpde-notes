@@ -6397,6 +6397,7 @@ This depends on neighbors--end of element-local analysis!
 
   (``no accumulation on interface'')
 - $a$ is constant
+- Neglect domain boundaries
 #+LATEX: \end{hidden}
 
 *** Gather up
