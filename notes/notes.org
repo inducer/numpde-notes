@@ -5971,7 +5971,7 @@ Let $\b q=(D_x, D_y, D_z, B_x, B_y, B_z)^T$. Consider $\b D=\epsilon \b E$ and $
   & =-\b 0,\qquad
   & \partial_{t}\b B+\nabla\times \b E & =\b 0.
 \end{align*}
-Rewrite in conservation law form: $\b q_t+\nabla \cdot F(\b q) = 0$
+Assume \epsilon, \mu constant. Rewrite in conservation law form: $\b q_t+\nabla \cdot F(\b q) = 0$
 #+LATEX: \begin{hidden}
 \begin{equation*}
   \b q_t + \nabla\cdot
