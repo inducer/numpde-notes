@@ -6869,7 +6869,6 @@ DG on modern processor architectures: Why?
   - and more regular.
 #+LATEX: \end{hidden}
 
-** TODO Nonlinearities, Overintegration
 ** TODO Curvi, WADG
 * A Glimpse of Integral Equation Methods for Elliptic Problems :noexport:
   :PROPERTIES:
