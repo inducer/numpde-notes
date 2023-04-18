@@ -6260,9 +6260,9 @@ Use the one we have on \(\hat E\):
 \[\phi_i^k(x):=\phi_i(T_k^{-1}(x)) \]
 #+LATEX: \end{hidden}
 
-What function space do we get if $\Psi$ is non-affine?
+What function space do we get if $T_k$ is non-affine?
 #+LATEX: \begin{hidden}
-- A basis of rational functions.
+- Complicated. Often: A basis of rational functions.
 - Approximation results nontrivial.
 #+LATEX: \end{hidden}
 
