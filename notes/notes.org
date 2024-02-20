@@ -3562,7 +3562,7 @@ An *inner product* is a function $\ip{\cdot}{\cdot} : V \times V \rightarrow
 \begin{eqnarray*}
   \ip{f}{f} & \ge & 0,\\
   \ip{f}{f} & = & 0 \Leftrightarrow f = 0,\\
-  \ip{f}{g} & = & \ip{f}{g},\\
+  \ip{f}{g} & = & \ip{g}{f},\\
   \ip{\alpha f + g}{h} & = & \alpha \ip{f}{h} + \ip{g}{h} .
 \end{eqnarray*}
 **** Induced Norm
