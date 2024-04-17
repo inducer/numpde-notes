@@ -5292,10 +5292,8 @@ attains its minimum over $V$ at $u$ iff $a (u, v) = g (v)$ for all $v \in V$.
 \vspace{-3ex}
 \begin{eqnarray*}
   J (u + tv) & = & \frac{1}{2} a (u + tv, u + tv) - g (u + tv)\\
-  & = & J (u) + t [a (u, v) - g (v)] + \frac{t^2}{2} a (v, v) .
+  & = & J (u) + t [a (u, v) - g (v)] + \frac{t^2}{2} a (v, v).\;  (u,v\in V, t\in\mathbb R)
 \end{eqnarray*}
-for $u, v \in V$ and $t \in \mathbb{R}$.
-
 If $u$ satisfies $a (u, v) = g (v)$, $J (u + v) > J (u)$.
 
 If $J$ has a min at $u$, derivative of $t \mapsto J (u + tv)$ must vanish at
@@ -5305,7 +5303,7 @@ $t = 0$.
 *** Example: Lagrange Multipliers in $\mathbb{R}^2$
 \begin{eqnarray*}
   f (x, y) = x^2 + y^2 & \rightarrow & \min !\\
-  g (x, y) = x + y & = & 2
+  g (x, y) = x + y -2 & = & 0
 \end{eqnarray*}
 Write down the Lagrangian.
 #+LATEX: \begin{hidden}
@@ -5469,8 +5467,7 @@ Only up to an additive constant. Additionally demand \( \int_{\Omega} pd x = 0\)
 #+LATEX: \end{hidden}
 *** Stokes: Variational Formulation
 \vspace*{-3ex}
-\[ \Delta \b{u}+ \nabla p = -\b{f}, \qquad \nabla \cdot
-   \b{u}= 0 \quad (x \in \partial \Omega) . \]
+\[ \Delta \b{u}+ \nabla p = -\b{f}, \qquad \nabla \cdot \b{u}= 0. \]
 Choose some function spaces (for homogeneous $\b{u}_0 =\b{0}$).
 #+LATEX: \begin{hidden}
 \vspace{-3ex}
@@ -5529,7 +5526,7 @@ $\rightarrow$ Need a criterion.
 The saddle point problem has a unique solution if and only if
 
 - The bilinear form $a (\cdot, \cdot)$ is \(V\)-elliptic, where
-  \(V = \left\{ u : b (u, \mu) = 0 \text{for all $\mu \in M$} \right\}\), i.e. there exists $c_0 > 0$ so that
+  \(V = \left\{ u : b (u, \mu) = 0 \text{ for all $\mu \in M$} \right\}\), i.e. there exists $c_0 > 0$ so that
   #+LATEX: \begin{hidden}
   \[ a (v, v) \ge c_0 \norm{v}_X^2  \qquad (v\in V). \]
   #+LATEX: \end{hidden}
