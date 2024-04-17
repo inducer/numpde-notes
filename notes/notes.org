@@ -5619,8 +5619,8 @@ Suppose there exists a bounded projector $\Pi_h : X \rightarrow X_h$ so that
 #+LATEX: \begin{hidden}
 \[ b (v - \Pi_h v, \mu_h) = 0 \quad (\mu_h \in M_h) . \]
 #+LATEX: \end{hidden}
-If $\norm{\Pi_h} \le c$ for some constant $c$ independent of $h$, then
-$b$ satisfies the inf-sup-condition on $X_h \times M_h$.
+If $\norm{\Pi_h} \le c$ for some $c$ indep. of $h$, then
+$b$ satisfies inf-sup on $X_h \times M_h$.
 **** End thm
      :PROPERTIES:
      :BEAMER_env: ignoreheading
@@ -5646,10 +5646,10 @@ $\mathcal{T}_h$. (Not in general!)
 
 **** \(H^1\)-Boundedness of the \(L^2\)-Projector (Braess Corollary II.7.8)
 
-Let $\pi_h^0$ be the \(L_2\)-projector onto a finite element space $V_h \subset
-H^1 (\Omega)$. Then, for an \(h\)-independent constant $c$,
+$\pi_h^0$: the \(L_2\)-projector onto FE space $V_h \subset
+H^1 (\Omega)$. Then:
 #+LATEX: \begin{hidden}
-\[ \norm{\pi_h^0 v}_{H^1} \le c \norm{v}_{H^1} . \]
+\[ \norm{\pi_h^0 v}_{H^1} \le c \norm{v}_{H^1} \quad\text{for $c$ independent of $h$}. \]
 #+LATEX: \end{hidden}
 **** End thm
      :PROPERTIES:
