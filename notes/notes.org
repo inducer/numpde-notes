@@ -5568,6 +5568,8 @@ Why does it suffice for $a$ to be \(V\)-elliptic?
 True in the linear algebra, too! (Think Schur complements.) ([[https://doi.org/10.1017/S0962492904000212][Benzi et al. `05]], Thm. 3.2)
 #+LATEX: \end{hidden}
 
+*** TODO Update this with better explanations from Strang (see Zotero "am65")
+https://math.mit.edu/classes/18.086/2006/am65.pdf
 *** inf-sup and Stokes
 \begin{eqnarray*}
   a (\b{u}, \b{v}) & = & \int_{\Omega} J_{\b{u}} :
@@ -5606,6 +5608,7 @@ The differential operators being applied to $\b u$ and $p$ in the Stokes system 
 
 \medskip
 \demolink{fe-elliptic}{Bad Discretizations for 2D Stokes}
+*** TODO In bad discr demo: Clarify why inf-sup check fails
 *** Establishing a Discrete inf-sup Condition
 
 Suppose $b : X \times M \rightarrow \mathbb{R}$ satisfies inf-sup. Subspaces $X_h\subseteq X$, $M_h\subseteq M$.
