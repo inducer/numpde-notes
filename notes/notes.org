@@ -5349,7 +5349,7 @@ Yields *saddle point problem*: find $(u, \lambda) \in X \times M$ so that
 \vspace*{-3ex}
 \begin{eqnarray*}
   f (x, y) = x^2 + y^2 & \rightarrow & \min !\\
-  g (x, y) = x + y & = & 2
+  g (x, y) = x + y - 2& = & 0
 \end{eqnarray*}
 Lagrangian: $\mathcal{L} (x, y, \lambda) = f (x, y) + \lambda g (x, y) = x^2 + y^2 + \lambda (x + y - 2)$.
 
